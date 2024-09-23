@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
-import Seo from '../../components/seo'
+import Seo from '../../../components/seo'
 import {
     farmBody,
     backButtonDiv,
@@ -8,7 +8,7 @@ import {
     tableDiv,
     table,
     header
-} from '../../components/val_layout.module.css'
+} from '../../../components/val_layout.module.css'
 
 const ValFarm = () => {
     return (

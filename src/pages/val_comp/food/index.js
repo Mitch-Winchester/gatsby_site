@@ -1,21 +1,23 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
-import Seo from '../../components/seo'
+import Seo from '../../../components/seo'
 import {
-    meadBody,
+    foodBody,
     backButtonDiv,
     button,
     tableDiv,
     table,
-    header
-} from '../../components/val_layout.module.css'
+    header,
+    searchContainer
+} from '../../../components/val_layout.module.css'
 
-const ValMead = () => {
+const ValFood = () => {
     return (
         <>
-            <body className={meadBody}>
-                <header className={header}>Mead Recipes</header>
-                <div className="search_container">
+            <body className={foodBody}>
+                <header className={header}>Food Recipes</header>
+                <div className={searchContainer}>
+                    <input type="text" id="searchBar" placeholder="Search..." />
                 </div>
                 
                 <div className={tableDiv}>
@@ -24,15 +26,19 @@ const ValMead = () => {
                             <tr id="tableHeader">
                                 <th></th>
                                 <th>Item</th>
-                                <th>Effect</th>
-                                <th>Duration (s)</th>
+                                <th>Health</th>
+                                <th>Stamina</th>
+                                <th>Eitr</th>
+                                <th>Healing</th>
+                                <th>Duration (min)</th>
+                                <th>Biome</th>
                                 <th>Recipe</th>
                             </tr>
                         </thead>
-                        <tbody id="meadTable"></tbody>
+                        <tbody id="foodTable"></tbody>
                     </table>
                 </div>
-                        
+                
                 <div className={backButtonDiv}>
                     <button className={button} onClick={()=>{navigate("/val_comp")}}>Back to Home Page</button>
                 </div>
@@ -41,6 +47,6 @@ const ValMead = () => {
     )
 }
 
-export const Head = () => <Seo title="Valheim Mead" />
+export const Head = () => <Seo title="Valheim Food" />
 
-export default ValMead
+export default ValFood

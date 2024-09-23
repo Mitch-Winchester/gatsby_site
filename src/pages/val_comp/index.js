@@ -37,12 +37,14 @@ const ValComp = () => {
     )
 }
 
+//Alert window that is displayed for buttons that currently do not
+//have pages to link to
 function underConstruction() {
     window.alert("This page is currently under construction!" +
         "\nPlease check back soon!"
     )
 }
 
-export const Head = () => <Seo title="Valheim Companion" />
+export const Head = () => <Seo title="Valheim Companion App" />
 
 export default ValComp
