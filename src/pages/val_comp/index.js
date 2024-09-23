@@ -15,13 +15,12 @@ const ValComp = () => {
     return (
         <>
             <body className={mainBody}>
-                <title>Valheim Companion</title>
                 <div className={mainHeader}></div>
                 <div className={buttonDiv}>
                     <div className={topButtonDiv}>
-                        <button className={button} id="bTool">Tools</button>
-                        <button className={button} id="bWeapon">Weapons</button>
-                        <button className={button} id="bArmor">Armor</button>
+                        <button className={button} onClick={()=>{underConstruction()}}>Tools</button>
+                        <button className={button} onClick={()=>{underConstruction()}}>Weapons</button>
+                        <button className={button} onClick={()=>{underConstruction()}}>Armor</button>
                     </div>
                     <div className={botButtonDiv}>
                         <button className={button} onClick={()=>{navigate("/val_comp/food")}}>Food</button>
@@ -35,6 +34,12 @@ const ValComp = () => {
             </body>
         </>
         
+    )
+}
+
+function underConstruction() {
+    window.alert("This page is currently under construction!" +
+        "\nPlease check back soon!"
     )
 }
 

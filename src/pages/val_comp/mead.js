@@ -6,18 +6,20 @@ import {
     backButtonDiv,
     button,
     tableDiv,
-    table
+    table,
+    header
 } from '../../components/val_layout.module.css'
 
 const ValMead = () => {
     return (
         <>
-            <body class={meadBody}>
-                <div class="search_container">
+            <body className={meadBody}>
+                <header className={header}>Mead Recipes</header>
+                <div className="search_container">
                 </div>
                 
-                <div class={tableDiv}>
-                    <table class={table}>
+                <div className={tableDiv}>
+                    <table className={table}>
                         <thead>
                             <tr id="tableHeader">
                                 <th></th>
@@ -31,8 +33,8 @@ const ValMead = () => {
                     </table>
                 </div>
                         
-                <div class={backButtonDiv}>
-                    <button class={button} onClick={()=>{navigate("/val_comp")}}>Back to Home Page</button>
+                <div className={backButtonDiv}>
+                    <button className={button} onClick={()=>{navigate("/val_comp")}}>Back to Home Page</button>
                 </div>
             </body>
         </>

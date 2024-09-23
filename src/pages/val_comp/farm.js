@@ -6,15 +6,17 @@ import {
     backButtonDiv,
     button,
     tableDiv,
-    table
+    table,
+    header
 } from '../../components/val_layout.module.css'
 
 const ValFarm = () => {
     return (
         <>
-            <body class={farmBody}>
-                <div class={tableDiv}>
-                    <table class={table}>
+            <body className={farmBody}>
+                <header className={header}>Farming & Fishing Recipes</header>
+                <div className={tableDiv}>
+                    <table className={table}>
                         <thead>
                             <tr id="tableHeader">
                                 <th></th>
@@ -28,8 +30,8 @@ const ValFarm = () => {
                     </table>
                 </div>
 
-                <div class={tableDiv}>
-                    <table class={table}>
+                <div className={tableDiv}>
+                    <table className={table}>
                         <thead>
                             <tr id="tableHeader">
                                 <th></th>
@@ -43,8 +45,8 @@ const ValFarm = () => {
                     </table>
                 </div>
 
-                <div class={tableDiv}>
-                    <table class={table}>
+                <div className={tableDiv}>
+                    <table className={table}>
                         <thead>
                             <tr id="tableHeader">
                                 <th></th>
@@ -57,8 +59,8 @@ const ValFarm = () => {
                     </table>
                 </div>
                 
-                <div class={backButtonDiv}>
-                    <button class={button} onClick={()=>{navigate("/val_comp")}}>Back to Home Page</button>
+                <div className={backButtonDiv}>
+                    <button className={button} onClick={()=>{navigate("/val_comp")}}>Back to Home Page</button>
                 </div>
             </body>
         </>
