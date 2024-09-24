@@ -12,7 +12,7 @@ const IndexPage = () => {
       <p>I'm making this by following the Gatsby Tutorial.</p>
       <StaticImage
         alt="Marco, a black and white Pomsky, laying in the park"
-        src="../images/marco_park.jpg"
+        src="../../static/images/marco_park.jpg"
         aspectRatio={3/4}
       />
     </Layout>
