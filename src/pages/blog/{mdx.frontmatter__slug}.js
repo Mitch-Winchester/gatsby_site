@@ -16,7 +16,7 @@ const BlogPost = ({ data, children }) => {
             />
             <p>
                 Photo Credit:{" "}
-                <a>
+                <a href={data.mdx.frontmatter.hero_image_credit_link}>
                     {data.mdx.frontmatter.hero_image_credit_text}
                 </a>
             </p>
