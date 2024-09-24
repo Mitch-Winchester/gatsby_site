@@ -10,7 +10,8 @@
   
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .mead-body {
   background-image: url("/images/backgrounds/ebrithil_mead.png");
@@ -23,7 +24,8 @@
   
   width: 100vw;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .food-body {
   background-image: url("/images/backgrounds/ebrithil_food.png");
@@ -36,7 +38,8 @@
   
   width: 100vw;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .farm-body {
   background-image: url("/images/backgrounds/ebrithil_farm.png");
@@ -49,7 +52,8 @@
   
   width: 100vw;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Style page headers */

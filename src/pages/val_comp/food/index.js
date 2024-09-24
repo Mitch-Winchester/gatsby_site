@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { navigate } from 'gatsby'
+import { navigate, graphql } from 'gatsby'
 import Seo from '../../../components/seo'
 import {
     foodBody,
@@ -11,7 +11,7 @@ import {
     searchContainer
 } from '../../../components/val_layout.module.css'
 
-const ValFood = () => {
+const ValFood = ({ data }) => {
     return (
         <>
             <body className={foodBody}>
@@ -35,7 +35,30 @@ const ValFood = () => {
                                 <th>Recipe</th>
                             </tr>
                         </thead>
-                        <tbody id="foodTable"></tbody>
+                        <tbody>
+                            {data.foodJson.content.map((food, index) => {
+                                let imagePath = `/images/food/${food.Item.replaceAll(' ','_')}.png`;
+
+                                return (
+                                    <tr key={index}>
+                                        <td>
+                                            <img
+                                                src={imagePath}
+                                                alt={food.Item}
+                                            />
+                                        </td>
+                                        <td>{food.Item}</td>
+                                        <td>{food.Health}</td>
+                                        <td>{food.Stamina}</td>
+                                        <td>{food.Eitr}</td>
+                                        <td>{food.Healing}</td>
+                                        <td>{food.Duration}</td>
+                                        <td>{food.Biome}</td>
+                                        <td>{food.Recipe}</td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
                     </table>
                 </div>
                 
@@ -46,6 +69,23 @@ const ValFood = () => {
         </>
     )
 }
+
+export const query = graphql`
+    query ($id: String) {
+        foodJson(id: {eq: $id}) {
+            content {
+                Biome
+                Duration
+                Eitr
+                Healing
+                Health
+                Item
+                Recipe
+                Stamina
+            }
+        }
+    }
+`
 
 export const Head = () => <Seo title="Valheim Food" />
 

@@ -12,7 +12,7 @@
             "Recipe": null
         },
         {
-            "Item": "Raspberry",
+            "Item": "Raspberries",
             "Health": 7,
             "Stamina": 20,
             "Eitr": null,
@@ -32,7 +32,7 @@
             "Recipe": null
         },
         {
-            "Item": "Boar Jerky",
+            "Item": "Boar jerky",
             "Health": 23,
             "Stamina": 23,
             "Eitr": null,
@@ -42,7 +42,7 @@
             "Recipe": "1 boar meat, 1 honey"
         },
         {
-            "Item": "Grilled Neck Tail",
+            "Item": "Grilled neck tail",
             "Health": 25,
             "Stamina": 8,
             "Eitr": null,
@@ -52,7 +52,7 @@
             "Recipe": null
         },
         {
-            "Item": "Cooked Boar Meat",
+            "Item": "Cooked boar meat",
             "Health": 30,
             "Stamina": 10,
             "Eitr": null,
@@ -62,7 +62,7 @@
             "Recipe": null
         },
         {
-            "Item": "Cooked Deer Meat",
+            "Item": "Cooked Deer meat",
             "Health": 35,
             "Stamina": 12,
             "Eitr": null,
@@ -72,7 +72,7 @@
             "Recipe": null
         },
         {
-            "Item": "Blueberry",
+            "Item": "Blueberries",
             "Health": 8,
             "Stamina": 25,
             "Eitr": null,
@@ -82,7 +82,7 @@
             "Recipe": null
         },
         {
-            "Item": "Yellow Mushroom",
+            "Item": "Yellow mushroom",
             "Health": 10,
             "Stamina": 30,
             "Eitr": null,
@@ -102,7 +102,7 @@
             "Recipe": null
         },
         {
-            "Item": "Queens Jam",
+            "Item": "Queens jam",
             "Health": 14,
             "Stamina": 40,
             "Eitr": null,
@@ -112,7 +112,7 @@
             "Recipe": "8 raspberries, 6 blueberries"
         },
         {
-            "Item": "Minced Meat Sauce",
+            "Item": "Minced meat sauce",
             "Health": 40,
             "Stamina": 13,
             "Eitr": null,
@@ -122,7 +122,7 @@
             "Recipe": "1 boar meat, 1 necktail, 1 carrot"
         },
         {
-            "Item": "Cooked Fish",
+            "Item": "Cooked fish",
             "Health": 45,
             "Stamina": 15,
             "Eitr": null,
@@ -132,7 +132,7 @@
             "Recipe": null
         },
         {
-            "Item": "Carrot Soup",
+            "Item": "Carrot soup",
             "Health": 15,
             "Stamina": 45,
             "Eitr": null,
@@ -142,7 +142,7 @@
             "Recipe": "3 carrots, 1 mushroom"
         },
         {
-            "Item": "Deer Stew",
+            "Item": "Deer stew",
             "Health": 45,
             "Stamina": 15,
             "Eitr": null,
@@ -162,7 +162,7 @@
             "Recipe": "1 ooze, 2 raspberries, 2 blueberries"
         },
         {
-            "Item": "Black Soup",
+            "Item": "Black soup",
             "Health": 50,
             "Stamina": 17,
             "Eitr": null,
@@ -182,7 +182,7 @@
             "Recipe": "4 entrails, 1 boar meat, 1 thistle"
         },
         {
-            "Item": "Turnip Stew",
+            "Item": "Turnip stew",
             "Health": 18,
             "Stamina": 55,
             "Eitr": null,
@@ -192,7 +192,7 @@
             "Recipe": "3 turnips, 1 boar meat"
         },
         {
-            "Item": "Wolf Jerky",
+            "Item": "Wolf jerky",
             "Health": 33,
             "Stamina": 33,
             "Eitr": null,
@@ -202,7 +202,7 @@
             "Recipe": "1 wolf meat, 1 honey"
         },
         {
-            "Item": "Onion Soup",
+            "Item": "Onion soup",
             "Health": 20,
             "Stamina": 60,
             "Eitr": null,
@@ -222,7 +222,7 @@
             "Recipe": "3 greydwarf eye, 1 freeze gland"
         },
         {
-            "Item": "Wolf Skewers",
+            "Item": "Wolf skewer",
             "Health": 65,
             "Stamina": 21,
             "Eitr": null,
@@ -242,7 +242,7 @@
             "Recipe": null
         },
         {
-            "Item": "Cooked Lox Meat",
+            "Item": "Cooked lox meat",
             "Health": 50,
             "Stamina": 16,
             "Eitr": null,
@@ -252,7 +252,7 @@
             "Recipe": null
         },
         {
-            "Item": "Fish Wraps",
+            "Item": "Fish wraps",
             "Health": 70,
             "Stamina": 23,
             "Eitr": null,
@@ -272,7 +272,7 @@
             "Recipe": "10 barley flour"
         },
         {
-            "Item": "Blood Pudding",
+            "Item": "Blood pudding",
             "Health": 25,
             "Stamina": 75,
             "Eitr": null,
@@ -282,7 +282,7 @@
             "Recipe": "2 thistle, 2 bloodbag, 4 barley flour"
         },
         {
-            "Item": "Lox Meat Pie",
+            "Item": "Lox meat pie",
             "Health": 75,
             "Stamina": 24,
             "Eitr": null,
@@ -292,7 +292,7 @@
             "Recipe": "2 lox meat, 2 cloudberries, 4 barley flour"
         },
         {
-            "Item": "Cooked Serpent Meat",
+            "Item": "Cooked serpent meat",
             "Health": 70,
             "Stamina": 23,
             "Eitr": null,
@@ -302,7 +302,7 @@
             "Recipe": null
         },
         {
-            "Item": "Serpent Stew",
+            "Item": "Serpent stew",
             "Health": 80,
             "Stamina": 26,
             "Eitr": null,
@@ -312,7 +312,7 @@
             "Recipe": "1 cooked serpent meat, 1 mushroom, 2 honey"
         },
         {
-            "Item": "Royal Jelly",
+            "Item": "Royal jelly",
             "Health": 15,
             "Stamina": 15,
             "Eitr": null,
@@ -322,7 +322,7 @@
             "Recipe": null
         },
         {
-            "Item": "Jotun Puffs",
+            "Item": "Jotun puffs",
             "Health": 25,
             "Stamina": 25,
             "Eitr": null,
@@ -342,7 +342,7 @@
             "Recipe": null
         },
         {
-            "Item": "Cooked Egg",
+            "Item": "Cooked egg",
             "Health": 35,
             "Stamina": 12,
             "Eitr": null,
@@ -352,7 +352,7 @@
             "Recipe": "1 egg"
         },
         {
-            "Item": "Cooked Chicken Meat",
+            "Item": "Cooked chicken meat",
             "Health": 60,
             "Stamina": 20,
             "Eitr": null,
@@ -362,7 +362,7 @@
             "Recipe": null
         },
         {
-            "Item": "Cooked Hare Meat",
+            "Item": "Cooked hare meat",
             "Health": 60,
             "Stamina": 20,
             "Eitr": null,
@@ -372,7 +372,7 @@
             "Recipe": null
         },
         {
-            "Item": "Cooked Seeker Meat",
+            "Item": "Cooked seeker meat",
             "Health": 60,
             "Stamina": 20,
             "Eitr": null,
@@ -382,7 +382,7 @@
             "Recipe": null
         },
         {
-            "Item": "Magically Stuffed Shroom",
+            "Item": "Stuffed mushroom",
             "Health": 25,
             "Stamina": 12,
             "Eitr": 75,
@@ -402,7 +402,7 @@
             "Recipe": "3 jotun puffs, 3 onions, 3 cloudberries"
         },
         {
-            "Item": "Meat Platter",
+            "Item": "Meat platter",
             "Health": 80,
             "Stamina": 26,
             "Eitr": null,
@@ -412,7 +412,7 @@
             "Recipe": "1 seeker meat, 1 lox meat, 1 hare meat"
         },
         {
-            "Item": "Honey Glazed Chicken",
+            "Item": "Honey glazed chicken",
             "Health": 80,
             "Stamina": 26,
             "Eitr": null,
@@ -422,7 +422,7 @@
             "Recipe": "1 chicken meat, 3 honey, 2 jotun puffs"
         },
         {
-            "Item": "Yggdrasil Porridge",
+            "Item": "Yggdrasil porridge",
             "Health": 27,
             "Stamina": 13,
             "Eitr": 80,
@@ -432,7 +432,7 @@
             "Recipe": "4 sap, 3 barley, 2 royal jelly"
         },
         {
-            "Item": "Misthare Supreme",
+            "Item": "Misthare supreme",
             "Health": 85,
             "Stamina": 28,
             "Eitr": null,
@@ -442,7 +442,7 @@
             "Recipe": "1 hare meat, 3 jotun puffs, 2 carrots"
         },
         {
-            "Item": "Mushroom Omelette",
+            "Item": "Mushroom omelette",
             "Health": 28,
             "Stamina": 85,
             "Eitr": null,
@@ -452,7 +452,7 @@
             "Recipe": "3 eggs, 3 jotun puffs"
         },
         {
-            "Item": "Seeker Aspic",
+            "Item": "Seeker aspic",
             "Health": 28,
             "Stamina": 14,
             "Eitr": 85,
@@ -462,7 +462,7 @@
             "Recipe": "2 seeker meat, 2 magecap, 2 royal jelly"
         },
         {
-            "Item": "Fish n' Bread",
+            "Item": "Fish n bread",
             "Health": 30,
             "Stamina": 90,
             "Eitr": null,

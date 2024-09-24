@@ -14,9 +14,6 @@ import {
 const ValMead = ({ data }) => {
     return (
         <>
-            <main>
-                
-            </main>
             <body className={meadBody}>
                 <header className={header}>Mead Recipes</header>
                 <div className={searchContainer}>
@@ -49,7 +46,7 @@ const ValMead = ({ data }) => {
                                         <td>
                                             <img
                                                 src={imagePath}
-                                                alt="mead"
+                                                alt={mead.Item}
                                             />
                                         </td>
                                         <td>{mead.Item}</td>
