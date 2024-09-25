@@ -2,7 +2,7 @@
     background-color: lightgrey;
     width: 100vw;
     height: 100vh;
-    margin: auto;
+    margin: -8px;
     overflow: auto;
 }
 .container {
