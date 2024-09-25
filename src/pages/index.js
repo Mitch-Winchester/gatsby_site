@@ -15,6 +15,9 @@ const IndexPage = () => {
         src="../../static/images/marco_park.jpg"
         aspectRatio={3/4}
       />
+      <div>
+        <p> </p>
+      </div>
     </Layout>
   )
 }

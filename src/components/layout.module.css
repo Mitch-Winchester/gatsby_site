@@ -1,6 +1,13 @@
+.body {
+    background-color: lightgrey;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    overflow: auto;
+}
 .container {
     margin: auto;
-    max-width: 80vw;
+    max-width: 70vw;
     font-family: sans-serif;
 }
 
@@ -24,8 +31,8 @@
 }
 
 .site-title {
-    font-size: 8vw;
-    color: gray;
+    font-size: 7vw;
+    color: rgb(94, 102, 111);
     font-weight: 700;
     margin: 3rem auto;
 
