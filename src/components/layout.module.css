@@ -17,10 +17,12 @@
 }
 
 .heading {
+    font-size: 5vw;
     color: rebeccapurple;
     margin: 3rem auto;
     display: flex;
     justify-content: center center;
+    text-align: center;
     width: fit-content;
 }
 .nav-links {
@@ -40,11 +42,11 @@
 }
 
 .site-title {
-    font-size: 6vw;
+    font-size: 8vw;
     color: rgb(94, 102, 111);
     font-weight: 700;
     margin: 3rem auto;
-
+    text-align: center;
     display: flex;
     justify-content: center center;
     width: fit-content;
