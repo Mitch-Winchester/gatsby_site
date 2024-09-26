@@ -48,8 +48,6 @@ const Layout = ({ pageTitle, children }) => {
                             </Link>
                         </li>
                     </ul>
-                </nav>
-                <nav>
                     <ul className={navLinks}>
                         <li className={navLinkItem}>
                             <Link to="/val_comp" className={navLinkText}>

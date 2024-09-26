@@ -26,13 +26,14 @@
 .nav-links {
     display: flex;
     list-style: none;
-
     justify-content: center center;
     margin: auto auto 1rem;
     width: fit-content;
+    padding: 0;
 }
 .nav-link-item {
-    padding-right: 2rem;
+    padding-right: 2vw;
+    padding-left: 2vw;
 }
 .nav-link-text {
     color: black;
