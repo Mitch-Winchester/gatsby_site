@@ -38,6 +38,17 @@ module.exports = {
         name: `farm`,
         path: `${__dirname}/src/pages/val_comp/farm/`
       }
+    },
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        // This type will contain remote schema Query type
+        typeName: "DrupalGraqhQL",
+        // This is field under which it's accessible
+        fieldName: "Drupal",
+        // Url to query from
+        url: `https://csc496f24demo.tldr.dev/graphql`,
+      },
     }
   ],
 }

@@ -43,6 +43,15 @@ const Layout = ({ pageTitle, children }) => {
                             </Link>
                         </li>
                         <li className={navLinkItem}>
+                            <Link to="/recipes" className={navLinkText}>
+                                Recipes
+                            </Link>
+                        </li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul className={navLinks}>
+                        <li className={navLinkItem}>
                             <Link to="/val_comp" className={navLinkText}>
                                 Valheim Companion App
                             </Link>
