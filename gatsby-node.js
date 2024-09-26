@@ -5,7 +5,7 @@ const path = require("path")
 exports.createPages = async ({ graphql, actions, reporter }) => {
     const { createPage } = actions
 
-    // Query for markdown nodes to use in creating pages.
+    // Query for recipe nodes to use in creating pages.
     const result = await graphql(
         `
             query {
@@ -39,7 +39,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         return
     }
 
-    // Create pages for each node
+    // Create pages for each recipe node
     const recipesTemplate = path.resolve(`src/templates/recipe.js`)
     result.data.Drupal.nodeRecipes.nodes.forEach(node => {
         createPage({

@@ -21,22 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `mead`,
-        path: `${__dirname}/src/pages/val_comp/mead/`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `food`,
-        path: `${__dirname}/src/pages/val_comp/food/`
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `farm`,
-        path: `${__dirname}/src/pages/val_comp/farm/`
+        path: `./data/`
       }
     },
     {

@@ -7,7 +7,7 @@
             "Stamina": 15,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "15m",
+            "Duration": 15,
             "Biome": "Meadows",
             "Recipe": null
         },
@@ -17,7 +17,7 @@
             "Stamina": 20,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "10m",
+            "Duration": 10,
             "Biome": "Meadows",
             "Recipe": null
         },
@@ -27,7 +27,7 @@
             "Stamina": 35,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "15m",
+            "Duration": 15,
             "Biome": "Meadows",
             "Recipe": null
         },
@@ -37,7 +37,7 @@
             "Stamina": 23,
             "Eitr": null,
             "Healing": 2,
-            "Duration": "30m",
+            "Duration": 30,
             "Biome": "Meadows",
             "Recipe": "1 boar meat, 1 honey"
         },
@@ -47,7 +47,7 @@
             "Stamina": 8,
             "Eitr": null,
             "Healing": 2,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Meadows",
             "Recipe": null
         },
@@ -57,7 +57,7 @@
             "Stamina": 10,
             "Eitr": null,
             "Healing": 2,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Meadows",
             "Recipe": null
         },
@@ -67,7 +67,7 @@
             "Stamina": 12,
             "Eitr": null,
             "Healing": 2,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Meadows",
             "Recipe": null
         },
@@ -77,7 +77,7 @@
             "Stamina": 25,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "10m",
+            "Duration": 10,
             "Biome": "Black Forest",
             "Recipe": null
         },
@@ -87,7 +87,7 @@
             "Stamina": 30,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "10m",
+            "Duration": 10,
             "Biome": "Black Forest",
             "Recipe": null
         },
@@ -97,7 +97,7 @@
             "Stamina": 32,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "15m",
+            "Duration": 15,
             "Biome": "Black Forest",
             "Recipe": null
         },
@@ -107,7 +107,7 @@
             "Stamina": 40,
             "Eitr": null,
             "Healing": 2,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Black Forest",
             "Recipe": "8 raspberries, 6 blueberries"
         },
@@ -117,7 +117,7 @@
             "Stamina": 13,
             "Eitr": null,
             "Healing": 3,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Black Forest",
             "Recipe": "1 boar meat, 1 necktail, 1 carrot"
         },
@@ -127,7 +127,7 @@
             "Stamina": 15,
             "Eitr": null,
             "Healing": 2,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Black Forest",
             "Recipe": null
         },
@@ -137,7 +137,7 @@
             "Stamina": 45,
             "Eitr": null,
             "Healing": 2,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Black Forest",
             "Recipe": "3 carrots, 1 mushroom"
         },
@@ -147,7 +147,7 @@
             "Stamina": 15,
             "Eitr": null,
             "Healing": 3,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Black Forest",
             "Recipe": "1 cooked deer meat, 1 blueberries, 1 carrot"
         },
@@ -157,7 +157,7 @@
             "Stamina": 50,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Swamp",
             "Recipe": "1 ooze, 2 raspberries, 2 blueberries"
         },
@@ -167,7 +167,7 @@
             "Stamina": 17,
             "Eitr": null,
             "Healing": 3,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Swamp",
             "Recipe": "1 bloodbag, 1 honey, 1 turnip"
         },
@@ -177,7 +177,7 @@
             "Stamina": 18,
             "Eitr": null,
             "Healing": 3,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Swamp",
             "Recipe": "4 entrails, 1 boar meat, 1 thistle"
         },
@@ -187,7 +187,7 @@
             "Stamina": 55,
             "Eitr": null,
             "Healing": 2,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Swamp",
             "Recipe": "3 turnips, 1 boar meat"
         },
@@ -197,7 +197,7 @@
             "Stamina": 33,
             "Eitr": null,
             "Healing": 3,
-            "Duration": "30m",
+            "Duration": 30,
             "Biome": "Mountains",
             "Recipe": "1 wolf meat, 1 honey"
         },
@@ -207,7 +207,7 @@
             "Stamina": 60,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Mountains",
             "Recipe": "3 onions"
         },
@@ -217,7 +217,7 @@
             "Stamina": 65,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Mountains",
             "Recipe": "3 greydwarf eye, 1 freeze gland"
         },
@@ -227,7 +227,7 @@
             "Stamina": 21,
             "Eitr": null,
             "Healing": 3,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Mountains",
             "Recipe": "1 wolf meat, 2 mushrooms, 1 onion"
         },
@@ -237,7 +237,7 @@
             "Stamina": 40,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "15m",
+            "Duration": 15,
             "Biome": "Plains",
             "Recipe": null
         },
@@ -247,7 +247,7 @@
             "Stamina": 16,
             "Eitr": null,
             "Healing": 4,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Plains",
             "Recipe": null
         },
@@ -257,7 +257,7 @@
             "Stamina": 23,
             "Eitr": null,
             "Healing": 4,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Plains",
             "Recipe": "2 cooked fish, 4 barley flour"
         },
@@ -267,7 +267,7 @@
             "Stamina": 70,
             "Eitr": null,
             "Healing": 2,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Plains",
             "Recipe": "10 barley flour"
         },
@@ -277,7 +277,7 @@
             "Stamina": 75,
             "Eitr": null,
             "Healing": 2,
-            "Duration": "30m",
+            "Duration": 30,
             "Biome": "Plains",
             "Recipe": "2 thistle, 2 bloodbag, 4 barley flour"
         },
@@ -287,7 +287,7 @@
             "Stamina": 24,
             "Eitr": null,
             "Healing": 4,
-            "Duration": "30m",
+            "Duration": 30,
             "Biome": "Plains",
             "Recipe": "2 lox meat, 2 cloudberries, 4 barley flour"
         },
@@ -297,7 +297,7 @@
             "Stamina": 23,
             "Eitr": null,
             "Healing": 3,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Ocean",
             "Recipe": null
         },
@@ -307,7 +307,7 @@
             "Stamina": 26,
             "Eitr": null,
             "Healing": 4,
-            "Duration": "30m",
+            "Duration": 30,
             "Biome": "Ocean",
             "Recipe": "1 cooked serpent meat, 1 mushroom, 2 honey"
         },
@@ -317,7 +317,7 @@
             "Stamina": 15,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "15m",
+            "Duration": 15,
             "Biome": "Mistlands",
             "Recipe": null
         },
@@ -327,7 +327,7 @@
             "Stamina": 25,
             "Eitr": null,
             "Healing": 1,
-            "Duration": "15m",
+            "Duration": 15,
             "Biome": "Mistlands",
             "Recipe": null
         },
@@ -337,7 +337,7 @@
             "Stamina": 25,
             "Eitr": 25,
             "Healing": 1,
-            "Duration": "15m",
+            "Duration": 15,
             "Biome": "Mistlands",
             "Recipe": null
         },
@@ -347,7 +347,7 @@
             "Stamina": 12,
             "Eitr": null,
             "Healing": 2,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Mistlands",
             "Recipe": "1 egg"
         },
@@ -357,7 +357,7 @@
             "Stamina": 20,
             "Eitr": null,
             "Healing": 5,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Mistlands",
             "Recipe": null
         },
@@ -367,7 +367,7 @@
             "Stamina": 20,
             "Eitr": null,
             "Healing": 5,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Mistlands",
             "Recipe": null
         },
@@ -377,7 +377,7 @@
             "Stamina": 20,
             "Eitr": null,
             "Healing": 5,
-            "Duration": "20m",
+            "Duration": 20,
             "Biome": "Mistlands",
             "Recipe": null
         },
@@ -387,7 +387,7 @@
             "Stamina": 12,
             "Eitr": 75,
             "Healing": 3,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Mistlands",
             "Recipe": "3 magecaps, 1 blood clot, 2 turnips"
         },
@@ -397,7 +397,7 @@
             "Stamina": 80,
             "Eitr": null,
             "Healing": 3,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Mistlands",
             "Recipe": "3 jotun puffs, 3 onions, 3 cloudberries"
         },
@@ -407,7 +407,7 @@
             "Stamina": 26,
             "Eitr": null,
             "Healing": 5,
-            "Duration": "30m",
+            "Duration": 30,
             "Biome": "Mistlands",
             "Recipe": "1 seeker meat, 1 lox meat, 1 hare meat"
         },
@@ -417,7 +417,7 @@
             "Stamina": 26,
             "Eitr": null,
             "Healing": 5,
-            "Duration": "30m",
+            "Duration": 30,
             "Biome": "Mistlands",
             "Recipe": "1 chicken meat, 3 honey, 2 jotun puffs"
         },
@@ -427,7 +427,7 @@
             "Stamina": 13,
             "Eitr": 80,
             "Healing": 3,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Mistlands",
             "Recipe": "4 sap, 3 barley, 2 royal jelly"
         },
@@ -437,7 +437,7 @@
             "Stamina": 28,
             "Eitr": null,
             "Healing": 5,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Mistlands",
             "Recipe": "1 hare meat, 3 jotun puffs, 2 carrots"
         },
@@ -447,7 +447,7 @@
             "Stamina": 85,
             "Eitr": null,
             "Healing": 3,
-            "Duration": "25m",
+            "Duration": 25,
             "Biome": "Mistlands",
             "Recipe": "3 eggs, 3 jotun puffs"
         },
@@ -457,7 +457,7 @@
             "Stamina": 14,
             "Eitr": 85,
             "Healing": 3,
-            "Duration": "30m",
+            "Duration": 30,
             "Biome": "Mistlands",
             "Recipe": "2 seeker meat, 2 magecap, 2 royal jelly"
         },
@@ -467,7 +467,7 @@
             "Stamina": 90,
             "Eitr": null,
             "Healing": 3,
-            "Duration": "30m",
+            "Duration": 30,
             "Biome": "Mistlands",
             "Recipe": "1 anglerfish, 2 bread dough"
         },
