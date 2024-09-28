@@ -12,12 +12,56 @@ import {
 } from '../../components/val_layout.module.css'
 
 const ValFood = ({ data }) => {
+    const [filter, setFilter] = React.useState("");
+
+    // Handle user input for the search
+    const inputChange = (e) => {
+        setFilter(e.target.value.toLowerCase());
+    };
+
+    // Filter table rows based on search input
+    const filteredItems = data.allDataJson.nodes.flatMap(node =>
+        node.content.filter(food => {
+            const item = food.Item.toLowerCase();
+            const biome = food.Biome.toLowerCase();
+            const recipe = food.Recipe?.toLowerCase();
+            const health = parseFloat(food.Health) || 0;
+            const stamina = parseFloat(food.Stamina) || 0;
+            const eitr = parseFloat(food.Eitr) || 0;
+
+            //text filters
+            const textFilters =
+                item.includes(filter) ||
+                biome.includes(filter) ||
+                recipe?.includes(filter);
+
+            //"math" filters
+            const balanced = health === stamina && filter.toLowerCase().includes("bal");
+            const healthFilter = Math.max(health, stamina, eitr) === health && health !== stamina && filter.toLowerCase().includes("hea");
+            const staminaFilter = Math.max(health, stamina, eitr) === stamina && health !== stamina && filter.toLowerCase().includes("sta");
+            const eitrFilter = Math.max(health, stamina, eitr) === eitr && health !== stamina && filter.toLowerCase().includes("eit");
+
+            return (
+                textFilters ||
+                balanced ||
+                healthFilter ||
+                staminaFilter ||
+                eitrFilter
+            );
+        })
+    );
+
     return (
         <>
             <body className={foodBody}>
                 <header className={header}>Food Recipes</header>
                 <div className={searchContainer}>
-                    <input type="text" id="searchBar" placeholder="Search..." />
+                    <input 
+                        type="text" 
+                        id="searchBar" 
+                        placeholder="Search..." 
+                        onChange={inputChange}
+                    />
                 </div>
                 
                 <div className={tableDiv}>
@@ -36,8 +80,7 @@ const ValFood = ({ data }) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {data.allDataJson.nodes.map(node => 
-                                node.content.map((food, index) => {
+                            {filteredItems.map((food, index) => {
                                     let imagePath = `/images/food/${food.Item.replaceAll(' ','_')}.png`;
 
                                     return (
@@ -58,8 +101,7 @@ const ValFood = ({ data }) => {
                                             <td>{food.Recipe}</td>
                                         </tr>
                                     );
-                                })
-                            )}
+                            })}
                         </tbody>
                     </table>
                 </div>

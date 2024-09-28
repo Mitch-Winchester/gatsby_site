@@ -12,12 +12,38 @@ import {
 } from '../../components/val_layout.module.css'
 
 const ValMead = ({ data }) => {
+    const [filter, setFilter] = React.useState("");
+
+    // Handle user input for the search
+    const inputChange = (e) => {
+        setFilter(e.target.value.toLowerCase());
+    };
+
+    // Filter table rows based on search input
+    const filteredItems = data.allDataJson.nodes.flatMap(node =>
+        node.content.filter(mead => {
+            const item = mead.Item.toLowerCase();
+            const effect = mead.Effect.toLowerCase();
+            const recipe = mead.Recipe.toLowerCase();
+            return (
+                item.includes(filter) ||
+                effect.includes(filter) ||
+                recipe.includes(filter)
+            );
+        })
+    );
+
     return (
         <>
             <body className={meadBody}>
                 <header className={header}>Mead Recipes</header>
                 <div className={searchContainer}>
-                    <input type="text" aria-label="searchBar" placeholder="Search..." />
+                    <input 
+                        type="text" 
+                        aria-label="searchBar" 
+                        placeholder="Search..." 
+                        onChange={inputChange}
+                    />
                 </div>
                 
                 <div className={tableDiv}>
@@ -32,8 +58,7 @@ const ValMead = ({ data }) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {data.allDataJson.nodes.map(node =>
-                                node.content.map((mead, index) => {
+                            {filteredItems.map((mead, index) => {
                                     let imagePath = `/images/mead/${mead.Item.replaceAll(' ', '_')}_mead.png`;
                                 
                                     if (mead.Item === "Tasty mead") {
@@ -56,8 +81,7 @@ const ValMead = ({ data }) => {
                                             <td>{mead.Recipe}</td>
                                         </tr>
                                     );
-                                })
-                            )}
+                            })}
                         </tbody>
                     </table>
                 </div>
