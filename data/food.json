@@ -477,7 +477,7 @@
             "Stamina": 15,
             "Eitr": null,
             "Healing": 1,
-            "Duration": null,
+            "Duration": 15,
             "Biome": "Ashlands",
             "Recipe": null
         },
@@ -487,7 +487,7 @@
             "Stamina": 30,
             "Eitr": null,
             "Healing": 1,
-            "Duration": null,
+            "Duration": 15,
             "Biome": "Ashlands",
             "Recipe": null
         },
@@ -497,7 +497,7 @@
             "Stamina": 30,
             "Eitr": 30,
             "Healing": 1,
-            "Duration": null,
+            "Duration": 15,
             "Biome": "Ashlands",
             "Recipe": null
         },
@@ -507,7 +507,7 @@
             "Stamina": 24,
             "Eitr": null,
             "Healing": 6,
-            "Duration": null,
+            "Duration": 20,
             "Biome": "Ashlands",
             "Recipe": "1 asksvin tail"
         },
@@ -517,7 +517,7 @@
             "Stamina": 24,
             "Eitr": null,
             "Healing": 6,
-            "Duration": null,
+            "Duration": 20,
             "Biome": "Ashlands",
             "Recipe": "1 volture meat"
         },
@@ -527,7 +527,7 @@
             "Stamina": 30,
             "Eitr": null,
             "Healing": 6,
-            "Duration": null,
+            "Duration": 25,
             "Biome": "Ashlands",
             "Recipe": "1 bonemaw meat"
         },
@@ -537,7 +537,7 @@
             "Stamina": 32,
             "Eitr": null,
             "Healing": 6,
-            "Duration": null,
+            "Duration": 25,
             "Biome": "Ashlands",
             "Recipe": "1 asksvin tail, 2 vineberry cluster, 1 smokepuff"
         },
@@ -547,7 +547,7 @@
             "Stamina": 34,
             "Eitr": null,
             "Healing": 6,
-            "Duration": null,
+            "Duration": 25,
             "Biome": "Ashlands",
             "Recipe": "1 asksvin tail, 1 volture meat, 1 fiddlehead"
         },
@@ -557,7 +557,7 @@
             "Stamina": 35,
             "Eitr": null,
             "Healing": 6,
-            "Duration": null,
+            "Duration": 30,
             "Biome": "Ashlands",
             "Recipe": "2 asksvin tail, 2 vineberry cluster, 4 barley flour"
         },
@@ -567,7 +567,7 @@
             "Stamina": 90,
             "Eitr": null,
             "Healing": 4,
-            "Duration": null,
+            "Duration": 25,
             "Biome": "Ashlands",
             "Recipe": "3 vineberry cluster, 1 honey, 1 fiddlehead"
         },
@@ -577,7 +577,7 @@
             "Stamina": 95,
             "Eitr": null,
             "Healing": 4,
-            "Duration": null,
+            "Duration": 25,
             "Biome": "Ashlands",
             "Recipe": "3 jotun puffs, 3 onion, 3 fiddlehead"
         },
@@ -587,7 +587,7 @@
             "Stamina": 100,
             "Eitr": null,
             "Healing": 4,
-            "Duration": null,
+            "Duration": 30,
             "Biome": "Ashlands",
             "Recipe": "1 volture egg, 2 vineberry cluster, 4 barley flour"
         },
@@ -597,7 +597,7 @@
             "Stamina": 14,
             "Eitr": 85,
             "Healing": 4,
-            "Duration": null,
+            "Duration": 25,
             "Biome": "Ashlands",
             "Recipe": "3 sap, 2 vineberry cluster, 2 fiddlehead"
         },
@@ -607,7 +607,7 @@
             "Stamina": 15,
             "Eitr": 90,
             "Healing": 4,
-            "Duration": null,
+            "Duration": 25,
             "Biome": "Ashlands",
             "Recipe": "4 sap, 2 magecap, 2 vineberry cluster, 2 smoke puff"
         },
@@ -617,7 +617,7 @@
             "Stamina": 16,
             "Eitr": 95,
             "Healing": 4,
-            "Duration": null,
+            "Duration": 30,
             "Biome": "Ashlands",
             "Recipe": "3 sap, 2 magecap, 2 fiddlehead, 2 smoke puff"
         }
