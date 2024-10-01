@@ -59,14 +59,8 @@ const ValMead = ({ data }) => {
                         </thead>
                         <tbody>
                             {filteredItems.map((mead, index) => {
-                                    let imagePath = `/images/mead/${mead.Item.replaceAll(' ', '_')}_mead.png`;
+                                    let imagePath = `/images/mead/${mead.Item.replaceAll(' ', '_')}.png`;
                                 
-                                    if (mead.Item === "Tasty mead") {
-                                        imagePath = `/images/mead/Tasty_mead.png`;
-                                    } else if (mead.Item === "Fire resistance") {
-                                        imagePath = `/images/mead/Fire_resistance_barley_wine.png`;
-                                    }
-
                                     return (
                                         <tr key={index}>
                                             <td>
