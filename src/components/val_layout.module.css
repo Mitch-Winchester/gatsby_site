@@ -15,13 +15,12 @@
 
 /* Style page headers */
 .main-header {
-  margin: 10%;
-  margin-top: 2.5%;
+  margin: 3rem auto;
   background-image: url("/images/valheim_logo.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center top;
-
+  background-position: center center;
+  display: flex;
   width: 80vw;
   height: 200px;
 }
