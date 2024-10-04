@@ -1,8 +1,5 @@
 import * as React from 'react'
-import { navigate } from 'gatsby'
 import {
-    backButtonDiv,
-    button,
     tableDiv,
     table,
     searchContainer
@@ -14,33 +11,46 @@ const ValTableLayout = ({
     filterFunction,
     data,
     headers,
-    imgBasePath
+    imgBasePath,
+    showSearch = true,
+    contentFlag = 'content',
+    contentNames = headers
 }) => {
+    // get first column name
+    let firstKey = contentNames[0];
+
     // Handle user input for the search
     const inputChange = (e) => {
-        setFilter(e.target.value.toLowerCase());
+        if (setFilter) {
+            setFilter(e.target.value.toLowerCase());
+        }
     };
 
     // Filter table items based on passed in filter function
-    const filteredItems = data.flatMap(node =>
-        node.content.filter(item => filterFunction(item, filter))
+    const filteredItems = filterFunction && filter !== undefined
+        ? data.flatMap(node =>
+            node[contentFlag].filter(item => filterFunction(item, filter))
+          )
+        : data.flatMap(node => node[contentFlag] // return all items if no filter
     );
 
     return (
         <>
-            <div className={searchContainer}>
-                <input 
-                    type="text" 
-                    id="searchBar" 
-                    placeholder="Search..." 
-                    onChange={inputChange}
-                />
-            </div>
+            {showSearch && setFilter && (
+                <div className={searchContainer}>
+                    <input 
+                        type="text" 
+                        placeholder="Search..." 
+                        onChange={inputChange}
+                        aria-label="search label"
+                    />
+                </div>
+            )}
             <div className={tableDiv}>
                 <table className={table}>
                     <thead>
                         <tr>
-                            <th></th>
+                            <th aria-label='image'></th>
                             {headers.map(column => (
                                 <th>{column}</th>
                             ))}
@@ -48,17 +58,17 @@ const ValTableLayout = ({
                     </thead>
                     <tbody>
                         {filteredItems.map((item, index) => {
-                                let imagePath = `${imgBasePath}/${item.Item.replaceAll(' ', '_')}.png`;
+                                let imagePath = `${imgBasePath}/${item[firstKey].replaceAll(' ', '_')}.png`;
                             
                                 return (
                                     <tr key={index}>
                                         <td>
                                             <img
                                                 src={imagePath}
-                                                alt={item.Item}
+                                                alt={item[0]}
                                             />
                                         </td>
-                                        {headers.map(column => (
+                                        {contentNames.map(column => (
                                             <td>{item[column]}</td>
                                         ))}
                                     </tr>
@@ -66,9 +76,6 @@ const ValTableLayout = ({
                         })}
                     </tbody>
                 </table>
-            </div>
-            <div className={backButtonDiv}>
-                <button className={button} aria-label="back" onClick={()=>{navigate("/val_comp")}}>Back to Home Page</button>
             </div>
         </>
     )

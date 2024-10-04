@@ -1,12 +1,11 @@
 import * as React from 'react'
-import { navigate, Link, graphql } from 'gatsby'
+import { navigate } from 'gatsby'
 import Seo from '../../components/seo'
 import ValLayout from '../../components/val_layout'
 import {
     buttonDiv,
     topButtonDiv,
     botButtonDiv,
-    backButtonDiv,
     button
 } from '../../components/val_layout.module.css'
 
@@ -27,9 +26,6 @@ const ValComp = () => {
                         <button className={button} onClick={()=>{navigate("farm")}}>Farming/Fishing</button>
                         <button className={button} onClick={()=>{navigate("mead")}}>Mead</button>
                     </div>
-                </div>
-                <div class={backButtonDiv}>
-                    <button class={button} onClick={()=>{navigate("/")}}>Back to Main Site</button>
                 </div>
         </ValLayout>
         
