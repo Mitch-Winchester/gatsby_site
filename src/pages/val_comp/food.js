@@ -47,8 +47,9 @@ const ValFood = ({ data }) => {
                 setFilter = {setFilter}
                 filterFunction = {foodFilter}
                 data = {data.allDataJson.nodes}
-                headers = {["Item", "Health", "Stamina", "Eitr", "Healing", "Duration", "Biome", "Recipe"]}
+                headers = {["Item", "Health", "Stamina", "Eitr", "Healing (hp/tick)", "Duration (m)", "Biome", "Recipe"]}
                 imgBasePath = {"/images/food"}
+                contentNames = {["Item", "Health", "Stamina", "Eitr", "Healing", "Duration", "Biome", "Recipe"]}
             />
         </ValLayout>
     )
