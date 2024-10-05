@@ -10,11 +10,7 @@ import {
 
 const ValLayout = ({ background, title, children }) => {
     let head = header;
-<<<<<<< HEAD
     let navPath = "/val_comp";
-=======
-    let navPath = "/";
->>>>>>> 9e216f3 (Add val_comp updates)
     let backButText = "Back to Home Page";
 
     if (title === "Main") {
