@@ -69,11 +69,6 @@ const ValTableLayout = ({
                                                 alt={item[0]}
                                             />
                                         </td>
-<<<<<<< HEAD
-                                        {contentNames.map(column => (
-                                            <td>{item[column]}</td>
-                                        ))}
-=======
                                         {contentNames.map((column, colIndex) => {
                                             if (Array.isArray(item[column])) {
                                                 return (
@@ -89,7 +84,6 @@ const ValTableLayout = ({
                                                 return <td key={colIndex}>{item[column]}</td>;
                                             }
                                         })}
->>>>>>> 9e216f3 (Add val_comp updates)
                                     </tr>
                                 );
                         })}
