@@ -67,7 +67,10 @@ export const query = graphql`
                     Healing
                     Duration
                     Biome
-                    Recipe
+                    Recipe {
+                        Material
+                        Quantity
+                    }
                 }
             }
         }

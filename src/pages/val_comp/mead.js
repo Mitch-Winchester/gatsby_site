@@ -45,7 +45,10 @@ export const query = graphql`
                     Item
                     Effect
                     Duration
-                    Recipe
+                    Recipe {
+                        Material
+                        Quantity
+                    }
                 }
             }
         }

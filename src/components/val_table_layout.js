@@ -2,8 +2,11 @@ import * as React from 'react'
 import {
     tableDiv,
     table,
+    tableHead,
     tableList,
-    searchContainer
+    searchContainer,
+    tableRow,
+    qualityTableData
 } from './val_layout.module.css'
 
 const ValTableLayout = ({
@@ -34,6 +37,7 @@ const ValTableLayout = ({
           )
         : data.flatMap(node => node[contentFlag] // return all items if no filter
     );
+    console.log(filteredItems);
 
     return (
         <>
@@ -53,7 +57,7 @@ const ValTableLayout = ({
                         <tr>
                             <th aria-label='image'></th>
                             {headers.map(column => (
-                                <th>{column}</th>
+                                <th className={tableHead}>{column}</th>
                             ))}
                         </tr>
                     </thead>
@@ -62,7 +66,7 @@ const ValTableLayout = ({
                                 let imagePath = `${imgBasePath}/${item[firstKey].replaceAll(' ', '_')}.png`;
                             
                                 return (
-                                    <tr key={index}>
+                                    <tr key={index} className={tableRow}>
                                         <td>
                                             <img
                                                 src={imagePath}
@@ -70,17 +74,51 @@ const ValTableLayout = ({
                                             />
                                         </td>
                                         {contentNames.map((column, colIndex) => {
-                                            if (Array.isArray(item[column])) {
-                                                return (
-                                                    <td key={colIndex} className={tableList}>
-                                                        {item[column].map((ingredient, ingIndex) => (
-                                                            <tr key={ingIndex}>
-                                                                <td>{ingredient}</td>
-                                                            </tr>
-                                                        ))}
-                                                    </td>
-                                                );
-                                            } else {
+                                            if (typeof item[column] === 'object' && item[column] !== null) {
+                                                // Handle Qualities Object
+                                                if (column === 'Qualities') {
+                                                    return (
+                                                        <>
+                                                        <td key={colIndex} className={tableList} colSpan={4}>
+                                                            {item[column].map((quality, qualIndex) => (
+                                                                <tr key={qualIndex} className={tableRow}>
+                                                                    <td className={qualityTableData}>{quality.Level}</td>
+                                                                    <td className={qualityTableData}>{quality.Durability}</td>
+                                                                    <td className={qualityTableData}>
+                                                                        {quality.Recipe.map((ingredient, ingIndex) => (
+                                                                            <div key={ingIndex}>
+                                                                                {ingredient.Material}: {ingredient.Quantity}
+                                                                            </div>
+                                                                        ))}
+                                                                    </td>
+                                                                    <td className={qualityTableData}>{quality.CraftingStation}</td>
+                                                                </tr>
+                                                            ))}
+                                                        </td>
+                                                        </>
+                                                    );
+                                                } else if (column === 'Recipe' ) { // Handle Recipes Object
+                                                    return (
+                                                        <td key={colIndex} className={tableList}>
+                                                            {item[column].map((ingredient, ingIndex) => (
+                                                                <tr key={ingIndex}>
+                                                                    <td>{ingredient.Material}: {ingredient.Quantity}</td>
+                                                                </tr>
+                                                            ))}
+                                                        </td>
+                                                    );
+                                                } else { // Handle array values
+                                                    return (
+                                                        <td key={colIndex} className={tableList}>
+                                                            {item[column].map((type, typeIndex) => (
+                                                                <tr key={typeIndex}>
+                                                                    <td>{type}</td>
+                                                                </tr>
+                                                            ))}
+                                                        </td>
+                                                    )
+                                                }
+                                            }  else { // Handle non-object values
                                                 return <td key={colIndex}>{item[column]}</td>;
                                             }
                                         })}
