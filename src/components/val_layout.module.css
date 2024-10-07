@@ -66,6 +66,7 @@
   text-align: left;
 }
 .table-row {
+  gap: 2px;
   /*border: 4px solid black;*/
 }
 .quality-table-data {
