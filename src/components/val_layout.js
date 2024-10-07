@@ -26,7 +26,7 @@ const ValLayout = ({
 
     // Handle differences between home page and secondary pages
     let head = header;
-    let navPath = "/";
+    let navPath = "/val_comp";
     let backButText = "Back to Home Page";
     let showButton = true;
 
