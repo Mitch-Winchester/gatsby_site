@@ -60,7 +60,7 @@
   background-color: rgb(94, 102, 111, 0.75);
 }
 .table-head {
-  padding: 5px 1vw;
+  padding: 5px .5vw;
 }
 .table-list {
   text-align: left;
@@ -69,7 +69,7 @@
   /*border: 4px solid black;*/
 }
 .quality-table-data {
-  padding: 10px 10px 10px 50px;
+  padding: 10px 5vw;
 }
 
 /* Buttons */

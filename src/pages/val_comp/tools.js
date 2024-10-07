@@ -6,14 +6,25 @@ import ValTableLayout from '../../components/val_table_layout'
 
 const ValTools = ({ data }) => {
 
+    // filterFunction to pass to tableLayout
+    const toolFilter = (tool, filter) => {
+        const item = tool.Item.toLowerCase();
+
+        return (
+            item.includes(filter)
+        );
+    };
+
     return (
         <ValLayout
             background = {`url("/images/backgrounds/ebrithil_base.png")`}
             title = "Tool Recipes"
+            showSearch = {true}
         >
             <ValTableLayout
+                filterFunction = {toolFilter}
                 data = {data.allDataJson.nodes}
-                headers = {["Item", "Qualities", "Durability", "Recipe", "Workbench"]}
+                headers = {["Item", "Qualities", "Durability", "Recipe", "Crafting Station"]}
                 imgBasePath = {"/images/tools"}
                 showSearch = {false}
                 contentFlag = 'building'
@@ -21,8 +32,9 @@ const ValTools = ({ data }) => {
             />
             <div style={{marginBottom: '2%'}}></div>
             <ValTableLayout
+                filterFunction = {toolFilter}
                 data = {data.allDataJson.nodes}
-                headers = {["Item", "Qualities", "Durability", "Recipe", "Forge"]}
+                headers = {["Item", "Qualities", "Durability", "Recipe", "Crafting Station"]}
                 imgBasePath = {"/images/tools"}
                 showSearch = {false}
                 contentFlag = 'farming'
@@ -30,16 +42,18 @@ const ValTools = ({ data }) => {
             />
             <div style={{marginBottom: '2%'}}></div>
             <ValTableLayout
+                filterFunction = {toolFilter}
                 data = {data.allDataJson.nodes}
-                headers = {["Item", "Qualities", "Durability", "Recipe", "Workbench"]}
+                headers = {["Item", "Qualities", "Durability", "Recipe", "Crafting Station"]}
                 imgBasePath = {"/images/tools"}
                 showSearch = {false}
                 contentFlag = 'fishing'
             />
             <div style={{marginBottom: '2%'}}></div>
             <ValTableLayout
+                filterFunction = {toolFilter}
                 data = {data.allDataJson.nodes}
-                headers = {["Item", "Tree Types", "Qualities", "Durability", "Recipe", "Workbench/Forge"]}
+                headers = {["Item", "Tree Types", "Qualities", "Durability", "Recipe", "Crafting Station"]}
                 imgBasePath = {"/images/tools"}
                 showSearch = {false}
                 contentFlag = 'logging'
@@ -47,8 +61,9 @@ const ValTools = ({ data }) => {
             />
             <div style={{marginBottom: '2%'}}></div>
             <ValTableLayout
+                filterFunction = {toolFilter}
                 data = {data.allDataJson.nodes}
-                headers = {["Item", "Ore Types", "Qualities", "Durability", "Recipe", "Workbench/Forge"]}
+                headers = {["Item", "Ore Types", "Qualities", "Durability", "Recipe", "Crafting Station"]}
                 imgBasePath = {"/images/tools"}
                 showSearch = {false}
                 contentFlag = 'mining'
@@ -72,7 +87,10 @@ export const query = graphql`
                             Material
                             Quantity
                         }
-                        CraftingStation
+                        CraftingStation {
+                            Station
+                            Level
+                        }
                     }
                 }
                 farming {
@@ -84,7 +102,10 @@ export const query = graphql`
                             Material
                             Quantity
                         }
-                        CraftingStation
+                        CraftingStation {
+                            Station
+                            Level
+                        }
                     }
                 }
                 fishing {
@@ -107,7 +128,10 @@ export const query = graphql`
                             Material
                             Quantity
                         }
-                        CraftingStation
+                        CraftingStation {
+                            Station
+                            Level
+                        }
                     }
                 }
                 mining {
@@ -120,7 +144,10 @@ export const query = graphql`
                             Material
                             Quantity
                         }
-                        CraftingStation
+                        CraftingStation {
+                            Station
+                            Level
+                        }
                     }
                 }
             }
