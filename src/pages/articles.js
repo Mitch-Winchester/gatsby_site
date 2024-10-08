@@ -3,18 +3,17 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
-const RecipePage = ({ data }) => {
+const ArticlePage = ({ data }) => {
     return (
-        <Layout pageTitle="My Recipes">
+        <Layout pageTitle="My Articles">
             {
-                data.Drupal.nodeRecipes.nodes.map((node) => (
+                data.Drupal.nodeArticles.nodes.map(node => (
                     <article key={node.id}>
                         <h2>
-                            <Link to={`/recipe/${node.title}`}>
+                            <Link to={`/article/${node.title}`}>
                                 {node.title}
                             </Link>
                         </h2>
-                        <p>Difficulty: {node.difficulty}</p>
                     </article>
                 ))
             }
@@ -25,11 +24,10 @@ const RecipePage = ({ data }) => {
 export const query = graphql`
     query {
         Drupal {
-            nodeRecipes(first: 10) {
+            nodeArticles(first: 10) {
                 nodes {
                     title
                     id
-                    difficulty
                 }
             }
         }
@@ -38,4 +36,4 @@ export const query = graphql`
 
 export const Head = () => <Seo title="My Recipes" />
 
-export default RecipePage
+export default ArticlePage

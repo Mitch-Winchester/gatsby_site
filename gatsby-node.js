@@ -28,6 +28,23 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                             }
                         }
                     }
+                    nodeArticles(first: 10) {
+                        nodes {
+                            title
+                            author {
+                                displayName
+                            }
+                            created
+                            mediaImage {
+                                mediaImage {
+                                    url
+                                }
+                            }
+                            body {
+                                processed
+                            }
+                        }
+                    }
                 }
             }
         `
@@ -39,8 +56,34 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         return
     }
 
-    // Create pages for each recipe node
+    // Create pages for each node
     const recipesTemplate = path.resolve(`src/templates/recipe.js`)
+    const articlesTemplate = path.resolve(`src/templates/article.js`)
+    
+    if (result.data.Drupal.nodeRecipes) {
+        result.data.Drupal.nodeRecipes.nodes.forEach(node => {
+            createPage({
+                path: `/recipe/${node.title}`,
+                component: recipesTemplate,
+                context: {
+                    recipe: node,
+                },
+            })
+        })
+    }
+    if (result.data.Drupal.nodeArticles) {
+        result.data.Drupal.nodeArticles.nodes.forEach(node => {
+            createPage({
+                path: `/article/${node.title}`,
+                component: articlesTemplate,
+                context: {
+                    article: node,
+                },
+            })
+        })
+    }
+
+    /*
     result.data.Drupal.nodeRecipes.nodes.forEach(node => {
         createPage({
             path: `/recipe/${node.title}`,
@@ -50,4 +93,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             },
         })
     })
+    result.data.Drupal.nodeArticles.nodes.forEach(node => {
+        createPage({
+            path: `/article/${node.title}`,
+            component: articlesTemplate,
+            context: {
+                article: node,
+            },
+        })
+    })
+    */
 }
