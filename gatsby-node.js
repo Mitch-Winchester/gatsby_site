@@ -24,7 +24,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                             numberOfServings
                             preparationTime
                             recipeInstruction {
-                                value
+                                processed
                             }
                         }
                     }

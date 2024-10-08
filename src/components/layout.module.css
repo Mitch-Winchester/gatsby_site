@@ -27,6 +27,7 @@
 }
 .nav-links {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     justify-content: center center;
     margin: auto auto 1rem;
