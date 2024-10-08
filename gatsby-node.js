@@ -9,7 +9,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const result = await graphql(
         `
             query {
-                Drupal {
+                allDrupalNodeArtRec {
                     nodeRecipes(first: 10) {
                         nodes {
                             title
@@ -60,8 +60,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const recipesTemplate = path.resolve(`src/templates/recipe.js`)
     const articlesTemplate = path.resolve(`src/templates/article.js`)
     
-    if (result.data.Drupal.nodeRecipes) {
-        result.data.Drupal.nodeRecipes.nodes.forEach(node => {
+    if (result.data.allDrupalNodeArtRec.nodeRecipes) {
+        result.data.allDrupalNodeArtRec.nodeRecipes.nodes.forEach(node => {
             createPage({
                 path: `/recipe/${node.title}`,
                 component: recipesTemplate,
@@ -71,8 +71,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             })
         })
     }
-    if (result.data.Drupal.nodeArticles) {
-        result.data.Drupal.nodeArticles.nodes.forEach(node => {
+    if (result.data.allDrupalNodeArtRec.nodeArticles) {
+        result.data.allDrupalNodeArtRec.nodeArticles.nodes.forEach(node => {
             createPage({
                 path: `/article/${node.title}`,
                 component: articlesTemplate,
@@ -82,25 +82,4 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             })
         })
     }
-
-    /*
-    result.data.Drupal.nodeRecipes.nodes.forEach(node => {
-        createPage({
-            path: `/recipe/${node.title}`,
-            component: recipesTemplate,
-            context: {
-                recipe: node,
-            },
-        })
-    })
-    result.data.Drupal.nodeArticles.nodes.forEach(node => {
-        createPage({
-            path: `/article/${node.title}`,
-            component: articlesTemplate,
-            context: {
-                article: node,
-            },
-        })
-    })
-    */
 }

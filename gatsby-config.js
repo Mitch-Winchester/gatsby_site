@@ -30,24 +30,13 @@ module.exports = {
         // This type will contain remote schema Query type
         typeName: "DrupalGraqhQL",
         // This is field under which it's accessible
-        fieldName: "Drupal",
+        fieldName: "allDrupalNodeArtRec",
         // Url to query from
         // url: "http://kecatalog.dev.wwbtc.com/graphql",
         //  url: `http://10.89.0.11/graphql`,
         //url: `https://api.keeneland.com/graphql`,
         // url: "http://10.89.0.24/graphql",
         url: `https://csc496f24demo.tldr.dev/graphql`,
-      }
-    },
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        // This type will contain remote schema Query type
-        typeName: "HorseDrupalGraqhQL",
-        // This is field under which it's accessible
-        fieldName: "allDrupalNodeHorse",
-        // Url to query from
-        url: `https://api.keeneland.com/graphql`
       }
     }
   ],

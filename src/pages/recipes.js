@@ -7,7 +7,7 @@ const RecipePage = ({ data }) => {
     return (
         <Layout pageTitle="My Recipes">
             {
-                data.Drupal.nodeRecipes.nodes.map((node) => (
+                data.allDrupalNodeArtRec.nodeRecipes.nodes.map((node) => (
                     <article key={node.id}>
                         <h2>
                             <Link to={`/recipe/${node.title}`}>
@@ -24,7 +24,7 @@ const RecipePage = ({ data }) => {
 
 export const query = graphql`
     query {
-        Drupal {
+        allDrupalNodeArtRec {
             nodeRecipes(first: 10) {
                 nodes {
                     title

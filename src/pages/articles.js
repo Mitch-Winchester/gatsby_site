@@ -7,7 +7,7 @@ const ArticlePage = ({ data }) => {
     return (
         <Layout pageTitle="My Articles">
             {
-                data.Drupal.nodeArticles.nodes.map(node => (
+                data.allDrupalNodeArtRec.nodeArticles.nodes.map(node => (
                     <article key={node.id}>
                         <h2>
                             <Link to={`/article/${node.title}`}>
@@ -23,7 +23,7 @@ const ArticlePage = ({ data }) => {
 
 export const query = graphql`
     query {
-        Drupal {
+        allDrupalNodeArtRec {
             nodeArticles(first: 10) {
                 nodes {
                     title
