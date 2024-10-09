@@ -9,19 +9,14 @@ const ValMead = ({ data }) => {
     const meadFilter = (mead, filter) => {
         const item = mead.Item.toLowerCase();
         const effect = mead.Effect.toLowerCase();
-        const recipe = mead.Recipe;
-
-        const lowerCaseFilter = filter.toLowerCase();
-
-        const recipeMatch = recipe.some(ingredient =>
-            ingredient.Material.toLowerCase().includes(lowerCaseFilter)
+        const recipe = mead.Recipe?.some(ingredient =>
+            ingredient.Material.toLowerCase().includes(filter)
         );
 
-        
         return (
-            item.includes(lowerCaseFilter) ||
-            effect.includes(lowerCaseFilter) ||
-            recipeMatch
+            item.includes(filter) ||
+            effect.includes(filter) ||
+            recipe
         );
     };
 

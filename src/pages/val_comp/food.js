@@ -7,40 +7,35 @@ import ValTableLayout from '../../components/val_table_layout'
 const ValFood = ({ data }) => {
     // filterFunction to pass to tableLayout
     const foodFilter = (food, filter) => {
-        const item = food.Item.toLowerCase();
-        const biome = food.Biome.toLowerCase();
-        const recipe = food.Recipe;
-        const health = parseFloat(food.Health) || 0;
-        const stamina = parseFloat(food.Stamina) || 0;
-        const eitr = parseFloat(food.Eitr) || 0;
+            const item = food.Item.toLowerCase();
+            const biome = food.Biome.toLowerCase();
+            const recipe = food.Recipe?.some(ingredient =>
+                ingredient.Material.toLowerCase().includes(filter)
+            );
+            const health = parseFloat(food.Health) || 0;
+            const stamina = parseFloat(food.Stamina) || 0;
+            const eitr = parseFloat(food.Eitr) || 0;
 
-        // make input all lowercase
-        const lowerCaseFilter = filter.toLowerCase();
+            //text filters
+            const textFilters =
+                item.includes(filter) ||
+                biome.includes(filter) ||
+                recipe
 
-        // check recipe object for match
-        const recipeMatch = recipe?.some(ingredient =>
-            ingredient.Material.toLowerCase().includes(lowerCaseFilter)
-        );
-        //text filters
-        const textFilters =
-            item.includes(lowerCaseFilter) ||
-            biome.includes(lowerCaseFilter) ||
-            recipeMatch
+            //"math" filters
+            const balanced = health === stamina && filter.toLowerCase().includes("bal");
+            const healthFilter = Math.max(health, stamina, eitr) === health && health !== stamina && filter.toLowerCase().includes("hea");
+            const staminaFilter = Math.max(health, stamina, eitr) === stamina && health !== stamina && filter.toLowerCase().includes("sta");
+            const eitrFilter = Math.max(health, stamina, eitr) === eitr && health !== stamina && filter.toLowerCase().includes("ei");
 
-        //"math" filters
-        const balanced = health === stamina && filter.toLowerCase().includes("bal");
-        const healthFilter = Math.max(health, stamina, eitr) === health && health !== stamina && filter.toLowerCase().includes("hea");
-        const staminaFilter = Math.max(health, stamina, eitr) === stamina && health !== stamina && filter.toLowerCase().includes("sta");
-        const eitrFilter = Math.max(health, stamina, eitr) === eitr && health !== stamina && filter.toLowerCase().includes("ei");
-
-        return (
-            textFilters ||
-            balanced ||
-            healthFilter ||
-            staminaFilter ||
-            eitrFilter
-        );
-    };
+            return (
+                textFilters ||
+                balanced ||
+                healthFilter ||
+                staminaFilter ||
+                eitrFilter
+            );
+        };
 
     return (
         <ValLayout
