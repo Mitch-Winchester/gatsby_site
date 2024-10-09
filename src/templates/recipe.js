@@ -1,60 +1,39 @@
 import * as React from 'react'
-import styled from 'styled-components'
 import Layout from '../components/layout'
-
-const NodeImage = styled.img`
-    width: 100%;
-`;
-const Row = styled.div`
-    display: flex;
-`;
-const ColPic = styled.div`
-    flex: 50%;
-    margin-right: 10%;
-`;
-const ColInfo = styled.div`
-    flex: 40%;
-`;
-const ColLeft = styled.div`
-    flex: 20%;
-    margin-right: 10%;
-`;
-const ColRight = styled.div`
-    flex: 70%;
-`;
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Recipe = ({ pageContext }) => {
     const { recipe } = pageContext
-    console.log(recipe.ingredients)
 
     return (
         <Layout pageTitle={recipe.title}>
-            <Row>
-                <ColPic>
-                    <NodeImage 
+            <div className="row mb-4">
+                <div className="col-md-6 mb-3">
+                    <img 
                         src={recipe.mediaImage.mediaImage.url} 
                         alt={recipe.title}
+                        className="img-fluid"
                     />
-                </ColPic>
-                <ColInfo>
-                    <p>Difficulty: {recipe.difficulty}</p>
-                    <p>Preparation Time: {recipe.preparationTime} minutes</p>
-                    <p>Cooking Time: {recipe.cookingTime} minutes</p>
-                    <p>Number of Servings: {recipe.numberOfServings}</p>
-                </ColInfo>
-            </Row>
-            <Row>
-                <ColLeft>
-                <h1>Ingredients:</h1>
-                {recipe.ingredients?.map((ingredient, ingIndex) => (
-                    <p>{ingredient}</p>
-                ))}
-                </ColLeft>
-                <ColRight>
+                </div>
+                <div className="col-md-4">
+                    <p className="mb-2"><strong>Difficulty:</strong> {recipe.difficulty}</p>
+                    <p className="mb-2"><strong>Preparation Time:</strong> {recipe.preparationTime} minutes</p>
+                    <p className="mb-2"><strong>Cooking Time:</strong> {recipe.cookingTime} minutes</p>
+                    <p className="mb-2"><strong>Number of Servings:</strong> {recipe.numberOfServings}</p>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-md-4 mb-3">
+                    <h2>Ingredients:</h2>
+                    {recipe.ingredients?.map((ingredient, ingIndex) => (
+                        <p key={ingIndex}>{ingredient}</p>
+                    ))}
+                </div>
+                <div className="col-md-8">
                     <h2>Recipe Instructions:</h2>
                     <p dangerouslySetInnerHTML={{ __html: recipe.recipeInstruction?.processed }}></p>
-                </ColRight>
-            </Row>
+                </div>
+            </div>
         </Layout>
     )
 }
