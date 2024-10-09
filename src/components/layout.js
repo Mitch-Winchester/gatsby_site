@@ -15,6 +15,7 @@ const LayCon = styled(Container)`
     @media (max-width: 576px) {
         margin: 2rem auto;
         max-width: 90vw;
+        padding: 1rem;
     }
 `;
 const BodyCon = styled(Container)`
