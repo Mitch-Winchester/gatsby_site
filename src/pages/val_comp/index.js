@@ -1,4 +1,6 @@
 import * as React from 'react'
+import styled from 'styled-components'
+import { Container, Row, Col } from 'react-bootstrap'
 import Seo from '../../components/seo'
 import ValLayout from '../../components/val_layout'
 import ValButton from '../../components/val_button'
@@ -7,6 +9,20 @@ import {
     buttonRow
 } from '../../components/val_layout.module.css'
 
+const ButCon = styled(Container)`
+    margin: 10vw;
+`;
+const ButRow = styled(Row)`
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 4rem 0;
+`
+const ButCol = styled(Col)`
+    display: flex;
+    justify-content: center;
+`;
+
 const ValComp = () => {
     return (
         <ValLayout
@@ -14,21 +30,35 @@ const ValComp = () => {
             title = "Main"
             showSearch = {false}
         >
-            <div className={buttonDiv}>
-                <div className={buttonRow}>
-                    <ValButton navPath={"food"} buttonText={"Food"}/>
-                    <ValButton navPath={"farm"} buttonText={"Farming/Fishing"}/>
-                    <ValButton navPath={"mead"} buttonText={"Mead"}/>
-                </div>
-                <div className={buttonRow}>
-                    <ValButton navPath={"tools"} buttonText={"Tools"}/>
-                    <ValButton clickFunction={underConstruction} buttonText={"Weapons"}/>
-                    <ValButton clickFunction={underConstruction} buttonText={"Armor"}/>
-                </div>
-                <div className={buttonRow}>
-                <ValButton clickFunction={underConstruction} buttonText={"Tips"}/>
-                </div>
-            </div>
+            <ButCon>
+                <ButRow>
+                    <ButCol>
+                        <ValButton navPath={"food"} buttonText={"Food"}/>
+                    </ButCol>
+                    <ButCol>
+                        <ValButton navPath={"farm"} buttonText={"Farming/Fishing"}/>
+                    </ButCol>
+                    <ButCol>
+                        <ValButton navPath={"mead"} buttonText={"Mead"}/>
+                    </ButCol>
+                </ButRow>
+                <ButRow>
+                    <ButCol>
+                        <ValButton navPath={"tools"} buttonText={"Tools"}/>
+                    </ButCol>
+                    <ButCol>
+                        <ValButton clickFunction={underConstruction} buttonText={"Weapons"}/>
+                    </ButCol>
+                    <ButCol>
+                        <ValButton clickFunction={underConstruction} buttonText={"Armor"}/>
+                    </ButCol>
+                </ButRow>
+                <ButRow>
+                    <ButCol>
+                            <ValButton clickFunction={underConstruction} buttonText={"Tips"}/>
+                    </ButCol>
+                </ButRow>
+            </ButCon>
         </ValLayout>
         
     )

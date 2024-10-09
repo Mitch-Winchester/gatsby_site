@@ -4,8 +4,7 @@ import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
 import {
     header,
-    mainHeader,
-    searchContainer
+    mainHeader
 } from './val_layout.module.css'
 
 const ValBody = styled(Container)`
@@ -21,7 +20,7 @@ const BackButCon = styled(Container)`
     justify-content: center;
     margin: 10%;
 `;
-const SearchBar = styled.input`
+const SearchBar = styled.div`
     display: flex;
     justify-content: center;
     position: relative;
@@ -69,35 +68,33 @@ const ValLayout = ({
     }
 
     return (
-        <>
-            <ValBody fluid
-                style={{backgroundImage: background}}
-            >
-                <header className={head}>{title}</header>
-                {showSearch && setFilter && (
-                    <div className={searchContainer}>
-                        <input 
-                            type="text" 
-                            placeholder="Search..." 
-                            onChange={inputChange}
-                            aria-label="search label"
-                        />
-                    </div>
-                )}
-                {/* Pass filter & setFilter to children as props */}
-                {React.Children.map(children, (child) =>
-                    React.cloneElement(child, { filter, setFilter })
-                )}
-                {showButton && (
-                    <BackButCon>
-                        <ValButton 
-                            buttonText = {backButText}
-                            navPath = {navPath}
-                        />
-                    </BackButCon>
-                )}
-            </ValBody>
-        </>
+        <ValBody fluid
+            style={{backgroundImage: background}}
+        >
+            <header className={head}>{title}</header>
+            {showSearch && setFilter && (
+                <SearchBar>
+                    <input 
+                        type="text" 
+                        placeholder="Search..." 
+                        onChange={inputChange}
+                        aria-label="search label"
+                    />
+                </SearchBar>
+            )}
+            {/* Pass filter & setFilter to children as props */}
+            {React.Children.map(children, (child) =>
+                React.cloneElement(child, { filter, setFilter })
+            )}
+            {showButton && (
+                <BackButCon>
+                    <ValButton 
+                        buttonText = {backButText}
+                        navPath = {navPath}
+                    />
+                </BackButCon>
+            )}
+        </ValBody>
     )
 }
 

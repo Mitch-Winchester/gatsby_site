@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
 import styled from 'styled-components'
-import { button } from './val_layout.module.css'
 
 const ValBut = styled.button`
     display: inline-block;
@@ -32,8 +31,7 @@ const ValButton = ({
     clickFunction = navigate
 }) => {
     return (
-        <ValBut 
-            className={button} 
+        <ValBut
             aria-label="back" 
             onClick={()=>{clickFunction(`${navPath}`)}}
         >

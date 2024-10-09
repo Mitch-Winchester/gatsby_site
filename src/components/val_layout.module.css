@@ -1,17 +1,3 @@
-/* Style the bodies */
-.val-body {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  
-  background-color: black;
-  
-  width: 100vw;
-  min-height: 100vh;
-  overflow: auto;
-}
-
 /* Style page headers */
 .main-header {
   margin: 10%;
@@ -97,18 +83,4 @@
   justify-content: center;
   gap: 10vw; /* Space between each button */
   padding: 0 15%; /* Adjusts space on the sides */
-}
-
-/* Search Bar */
-.search-container {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin: 1%;
-}
-.search-container input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
 }
