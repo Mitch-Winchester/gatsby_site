@@ -2,12 +2,25 @@ import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
-import {
-    heading,
-    siteTitle,
-    myBody
-} from './layout.module.css'
 
+const LayCon = styled(Container)`
+    margin: 2rem auto;
+    font-family: sans-serif;
+    background-color: lightgrey;
+    border: 4px solid black;
+    border-radius: 30px;
+    padding: 4rem;
+    box-shadow: 0 0 20px 10px black;
+
+    @media (max-width: 576px) {
+        margin: 2rem auto;
+        max-width: 90vw;
+    }
+`;
+const BodyCon = styled(Container)`
+    background-color: rgb(94, 102, 111);
+    overflow: auto;
+`;
 const NavList = styled.ul`
     display: flex;
     justify-content: center;
@@ -31,20 +44,25 @@ const NavLink = styled(Link)`
         color: white;
     }
 `;
-const LayCon = styled(Container)`
-    margin: 2rem auto;
-    font-family: sans-serif;
-    background-color: lightgrey;
-    border: 4px solid black;
-    border-radius: 30px;
-    padding: 20px;
-    box-shadow: 0 0 20px 10px black;
-
-    @media (max-width: 576px) {
-        margin: 2rem auto;
-        max-width: 90vw;
-    }
-`
+const SiteHead = styled.header`
+    font-size: 8vw;
+    color: rgb(94, 102, 111);
+    font-weight: 700;
+    margin: 3rem auto;
+    text-align: center;
+    display: flex;
+    justify-content: center center;
+    width: fit-content;
+`;
+const PageHead = styled.h1`
+    font-size: 5vw;
+    color: rebeccapurple;
+    margin: 3rem auto;
+    display: flex;
+    justify-content: center center;
+    text-align: center;
+    width: fit-content;
+`;
 
 
 const Layout = ({ pageTitle, children }) => {
@@ -59,9 +77,9 @@ const Layout = ({ pageTitle, children }) => {
     `)
 
     return (
-        <div className={myBody}>
+        <BodyCon fluid>
             <LayCon>
-                <header className={siteTitle}>{data.site.siteMetadata.title}</header>
+                <SiteHead>{data.site.siteMetadata.title}</SiteHead>
                 <nav>
                     <NavList className="nav nav-pills">
                         <li className="nav-item">
@@ -111,11 +129,11 @@ const Layout = ({ pageTitle, children }) => {
                     </NavList>
                 </nav>
                 <main>
-                    <h1 className={heading}>{pageTitle}</h1>
+                    <PageHead>{pageTitle}</PageHead>
                     {children}
                 </main>
             </LayCon>
-        </div>
+        </BodyCon>
     )
 }
 
