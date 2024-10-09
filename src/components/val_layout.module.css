@@ -98,33 +98,6 @@
   gap: 10vw; /* Space between each button */
   padding: 0 15%; /* Adjusts space on the sides */
 }
-.back-button-div {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  margin: 15%;
-}
-.button {
-  display: inline-block;
-  padding: 1vh 3vw;
-  font-size: 2vw;
-  cursor: pointer;
-  text-align: center;
-  outline: none;
-  color: rgb(255, 98, 0);
-  background-color: rgb(94, 102, 111);
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 0.5vh lightgray;
-}
-.button:hover {
-  background-color: rgb(80, 85, 91);
-}
-.button:active {
-  background-color: rgb(80, 85, 91);
-  box-shadow: 0 0.25vh darkgray;
-  transform: translateY(0.25vh);
-}
 
 /* Search Bar */
 .search-container {

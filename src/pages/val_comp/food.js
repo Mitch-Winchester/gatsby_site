@@ -5,37 +5,42 @@ import ValLayout from '../../components/val_layout'
 import ValTableLayout from '../../components/val_table_layout'
 
 const ValFood = ({ data }) => {
-    const [filter, setFilter] = React.useState("");
-
     // filterFunction to pass to tableLayout
     const foodFilter = (food, filter) => {
-            const item = food.Item.toLowerCase();
-            const biome = food.Biome.toLowerCase();
-            const recipe = food.Recipe;
-            const health = parseFloat(food.Health) || 0;
-            const stamina = parseFloat(food.Stamina) || 0;
-            const eitr = parseFloat(food.Eitr) || 0;
+        const item = food.Item.toLowerCase();
+        const biome = food.Biome.toLowerCase();
+        const recipe = food.Recipe;
+        const health = parseFloat(food.Health) || 0;
+        const stamina = parseFloat(food.Stamina) || 0;
+        const eitr = parseFloat(food.Eitr) || 0;
 
-            //text filters
-            const textFilters =
-                item.includes(filter) ||
-                biome.includes(filter) ||
-                recipe?.includes(filter);
+        // make input all lowercase
+        const lowerCaseFilter = filter.toLowerCase();
 
-            //"math" filters
-            const balanced = health === stamina && filter.toLowerCase().includes("bal");
-            const healthFilter = Math.max(health, stamina, eitr) === health && health !== stamina && filter.toLowerCase().includes("hea");
-            const staminaFilter = Math.max(health, stamina, eitr) === stamina && health !== stamina && filter.toLowerCase().includes("sta");
-            const eitrFilter = Math.max(health, stamina, eitr) === eitr && health !== stamina && filter.toLowerCase().includes("ei");
+        // check recipe object for match
+        const recipeMatch = recipe?.some(ingredient =>
+            ingredient.Material.toLowerCase().includes(lowerCaseFilter)
+        );
+        //text filters
+        const textFilters =
+            item.includes(lowerCaseFilter) ||
+            biome.includes(lowerCaseFilter) ||
+            recipeMatch
 
-            return (
-                textFilters ||
-                balanced ||
-                healthFilter ||
-                staminaFilter ||
-                eitrFilter
-            );
-        };
+        //"math" filters
+        const balanced = health === stamina && filter.toLowerCase().includes("bal");
+        const healthFilter = Math.max(health, stamina, eitr) === health && health !== stamina && filter.toLowerCase().includes("hea");
+        const staminaFilter = Math.max(health, stamina, eitr) === stamina && health !== stamina && filter.toLowerCase().includes("sta");
+        const eitrFilter = Math.max(health, stamina, eitr) === eitr && health !== stamina && filter.toLowerCase().includes("ei");
+
+        return (
+            textFilters ||
+            balanced ||
+            healthFilter ||
+            staminaFilter ||
+            eitrFilter
+        );
+    };
 
     return (
         <ValLayout
@@ -43,8 +48,6 @@ const ValFood = ({ data }) => {
             title = "Food Recipes"
         >
             <ValTableLayout
-                filter = {filter}
-                setFilter = {setFilter}
                 filterFunction = {foodFilter}
                 data = {data.allDataJson.nodes}
                 headers = {["Item", "Health", "Stamina", "Eitr", "Healing (hp/tick)", "Duration (m)", "Biome", "Recipe"]}

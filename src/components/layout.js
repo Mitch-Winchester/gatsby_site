@@ -9,8 +9,9 @@ const LayCon = styled(Container)`
     background-color: lightgrey;
     border: 4px solid black;
     border-radius: 30px;
-    padding: 4rem;
+    padding: 3rem;
     box-shadow: 0 0 20px 10px black;
+    max-width: 80vw;
 
     @media (max-width: 768px) {
         padding: 2rem;
@@ -50,7 +51,7 @@ const NavLink = styled(Link)`
     }
 `;
 const SiteHead = styled.header`
-    font-size: 8vw;
+    font-size: 7vw;
     color: rgb(94, 102, 111);
     font-weight: 700;
     margin: 3rem auto;

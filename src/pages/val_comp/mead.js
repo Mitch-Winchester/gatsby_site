@@ -5,18 +5,24 @@ import ValLayout from '../../components/val_layout'
 import ValTableLayout from '../../components/val_table_layout'
 
 const ValMead = ({ data }) => {
-    const [filter, setFilter] = React.useState("");
-
     // filterFunction to pass to tableLayout
     const meadFilter = (mead, filter) => {
-            const item = mead.Item.toLowerCase();
-            const effect = mead.Effect.toLowerCase();
-            const recipe = mead.Recipe;
-            return (
-                item.includes(filter) ||
-                effect.includes(filter) ||
-                recipe.includes(filter)
-            );
+        const item = mead.Item.toLowerCase();
+        const effect = mead.Effect.toLowerCase();
+        const recipe = mead.Recipe;
+
+        const lowerCaseFilter = filter.toLowerCase();
+
+        const recipeMatch = recipe.some(ingredient =>
+            ingredient.Material.toLowerCase().includes(lowerCaseFilter)
+        );
+
+        
+        return (
+            item.includes(lowerCaseFilter) ||
+            effect.includes(lowerCaseFilter) ||
+            recipeMatch
+        );
     };
 
     return (
@@ -25,8 +31,6 @@ const ValMead = ({ data }) => {
             title = "Mead Recipes"
         >
             <ValTableLayout
-                filter = {filter}
-                setFilter = {setFilter}
                 filterFunction = {meadFilter}
                 data = {data.allDataJson.nodes}
                 headers = {["Item", "Effect", "Duration (s)", "Recipe"]}

@@ -1,12 +1,39 @@
 import * as React from 'react'
 import ValButton from './val_button'
+import styled from 'styled-components'
+import { Container } from 'react-bootstrap'
 import {
-    backButtonDiv,
-    valBody,
     header,
     mainHeader,
     searchContainer
 } from './val_layout.module.css'
+
+const ValBody = styled(Container)`
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow: auto;
+`;
+const BackButCon = styled(Container)`
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+`;
+const SearchBar = styled.input`
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 1%;
+
+    &.input {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+    }
+`
 
 const ValLayout = ({
     background,
@@ -43,8 +70,7 @@ const ValLayout = ({
 
     return (
         <>
-            <body 
-                className={valBody} 
+            <ValBody fluid
                 style={{backgroundImage: background}}
             >
                 <header className={head}>{title}</header>
@@ -63,14 +89,14 @@ const ValLayout = ({
                     React.cloneElement(child, { filter, setFilter })
                 )}
                 {showButton && (
-                    <div className={backButtonDiv}>
+                    <BackButCon>
                         <ValButton 
                             buttonText = {backButText}
                             navPath = {navPath}
                         />
-                    </div>
+                    </BackButCon>
                 )}
-            </body>
+            </ValBody>
         </>
     )
 }
