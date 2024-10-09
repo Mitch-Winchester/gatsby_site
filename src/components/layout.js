@@ -12,6 +12,10 @@ const LayCon = styled(Container)`
     padding: 4rem;
     box-shadow: 0 0 20px 10px black;
 
+    @media (max-width: 768px) {
+        padding: 2rem;
+    }
+    
     @media (max-width: 576px) {
         margin: 2rem auto;
         max-width: 90vw;
