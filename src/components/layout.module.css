@@ -1,13 +1,12 @@
-.body {
+.my-body {
     background-color: rgb(94, 102, 111);
     width: 100vw;
     height: 100vh;
-    margin: -8px;
     overflow: auto;
 }
-.container {
+.my-container {
     margin: 2rem auto;
-    max-width: 80vw;
+    width: 80vw;
     font-family: sans-serif;
     background-color: lightgrey;
     border: 4px solid black;
