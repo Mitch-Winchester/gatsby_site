@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import { 
-    myContainer,
+import { Container } from 'react-bootstrap'
+import {
     heading,
     siteTitle,
     myBody
@@ -30,6 +30,20 @@ const NavLink = styled(Link)`
         background-color: rebeccapurple;
         color: white;
     }
+`;
+const LayCon = styled(Container)`
+    margin: 2rem auto;
+    font-family: sans-serif;
+    background-color: lightgrey;
+    border: 4px solid black;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 0 20px 10px black;
+
+    @media (max-width: 576px) {
+        margin: 2rem auto;
+        max-width: 90vw;
+    }
 `
 
 
@@ -46,7 +60,7 @@ const Layout = ({ pageTitle, children }) => {
 
     return (
         <div className={myBody}>
-            <div className={myContainer}>
+            <LayCon>
                 <header className={siteTitle}>{data.site.siteMetadata.title}</header>
                 <nav>
                     <NavList className="nav nav-pills">
@@ -100,7 +114,7 @@ const Layout = ({ pageTitle, children }) => {
                     <h1 className={heading}>{pageTitle}</h1>
                     {children}
                 </main>
-            </div>
+            </LayCon>
         </div>
     )
 }
