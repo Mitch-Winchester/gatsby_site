@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Link, graphql } from 'gatsby'
-import { Layout } from '../../components/layout'
+import { graphql } from 'gatsby'
+import { Layout, StyledLink } from '../../components/layout'
 import Seo from '../../components/seo'
 
 const BlogPage = ({ data }) => {
@@ -10,9 +10,9 @@ const BlogPage = ({ data }) => {
                 data.allMdx.nodes.map((node) => (
                     <article key={node.id}>
                         <h2>
-                            <Link to={`/blog/${node.frontmatter.slug}`}>
+                            <StyledLink to={`/blog/${node.frontmatter.slug}`}>
                                 {node.frontmatter.title}
-                            </Link>
+                            </StyledLink>
                         </h2>
                         <p><strong>Posted:</strong> {node.frontmatter.date}</p>
                         <p>{node.excerpt}</p>

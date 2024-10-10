@@ -7,6 +7,9 @@ const Img = styled.img`
     border-radius: 30px;
     margin-bottom: 2rem;
 `;
+const StyledLink = styled(Link)`
+    color: rgb(94, 102, 111);
+`;
 const LayCon = styled(Container)`
     margin: 2rem auto;
     font-family: sans-serif;
@@ -146,4 +149,4 @@ const Layout = ({ pageTitle, children }) => {
     )
 }
 
-export { Layout, Img }
+export { Layout, Img, StyledLink }

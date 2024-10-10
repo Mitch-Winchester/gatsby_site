@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Link, graphql } from 'gatsby'
-import { Layout } from '../components/layout'
+import { graphql } from 'gatsby'
+import { Layout, StyledLink } from '../components/layout'
 import Seo from '../components/seo'
 
 const ArticlePage = ({ data }) => {
@@ -10,9 +10,9 @@ const ArticlePage = ({ data }) => {
                 data.allDrupalNodeArtRec.nodeArticles.nodes.map(node => (
                     <article key={node.id}>
                         <h2>
-                            <Link to={`/article/${node.title}`}>
+                            <StyledLink to={`/article/${node.title}`}>
                                 {node.title}
-                            </Link>
+                            </StyledLink>
                         </h2>
                         <p><strong>Author:</strong> {node.author.displayName.charAt(0).toUpperCase()+node.author.displayName.slice(1)}</p>
                     </article>

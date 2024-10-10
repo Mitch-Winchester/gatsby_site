@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Link, graphql } from 'gatsby'
-import { Layout } from '../components/layout'
+import { graphql } from 'gatsby'
+import { Layout, StyledLink } from '../components/layout'
 import Seo from '../components/seo'
 
 const RecipePage = ({ data }) => {
@@ -10,9 +10,9 @@ const RecipePage = ({ data }) => {
                 data.allDrupalNodeArtRec.nodeRecipes.nodes.map((node) => (
                     <article key={node.id}>
                         <h2>
-                            <Link to={`/recipe/${node.title}`}>
+                            <StyledLink to={`/recipe/${node.title}`}>
                                 {node.title}
-                            </Link>
+                            </StyledLink>
                         </h2>
                         <p>
                             <strong>Difficulty:</strong>&nbsp;&nbsp;
