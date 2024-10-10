@@ -63,7 +63,7 @@ const Recipe = ({ pageContext }) => {
                         </Col>
                         <Col>
                             <p><strong>Difficulty:</strong></p>
-                            <p>{recipe.difficulty}</p>  
+                            <p>{recipe.difficulty.charAt(0).toUpperCase()+recipe.difficulty.slice(1)}</p>  
                         </Col>
                     </Row>
                 </InfoCol>

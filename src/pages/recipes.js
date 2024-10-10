@@ -14,7 +14,7 @@ const RecipePage = ({ data }) => {
                                 {node.title}
                             </Link>
                         </h2>
-                        <p>Difficulty: {node.difficulty}</p>
+                        <p><strong>Difficulty:</strong> {node.difficulty.charAt(0).toUpperCase()+node.difficulty.slice(1)}</p>
                     </article>
                 ))
             }

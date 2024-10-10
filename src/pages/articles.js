@@ -14,6 +14,7 @@ const ArticlePage = ({ data }) => {
                                 {node.title}
                             </Link>
                         </h2>
+                        <p><strong>Author:</strong> {node.author.displayName.charAt(0).toUpperCase()+node.author.displayName.slice(1)}</p>
                     </article>
                 ))
             }
@@ -28,6 +29,9 @@ export const query = graphql`
                 nodes {
                     title
                     id
+                    author {
+                        displayName
+                    }
                 }
             }
         }
