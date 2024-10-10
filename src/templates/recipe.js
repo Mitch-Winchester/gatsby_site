@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Layout from '../components/layout'
+import { Layout, Img } from '../components/layout'
 import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 
@@ -7,6 +7,16 @@ const InfoCol = styled(Col)`
     justify-content: center;
     text-align: center;
     align-items: center;
+`;
+const InfoSpacer = styled.div`
+    margin-bottom: 4rem;
+
+    @media (max-width: 992px) {
+        margin-bottom: 2rem;
+    }
+    @media (max-width: 576px) {
+        margin-bottom: 1rem;
+    }
 `;
 const IngCol = styled(Col)`
     padding: 2rem;
@@ -31,15 +41,20 @@ const RecCol = styled(Col)`
         padding: 1rem;
     }
 `;
+const RecSum = styled.p`
+    text-align: center;
+    margin-bottom: 2rem;
+`;
 
 const Recipe = ({ pageContext }) => {
     const { recipe } = pageContext
 
     return (
         <Layout pageTitle={recipe.title}>
+            <RecSum dangerouslySetInnerHTML={{ __html: recipe.summary?.processed }}></RecSum>
             <Row className="align-items-center">
                 <Col xs={12} md={6}>
-                    <img 
+                    <Img 
                         src={recipe.mediaImage.mediaImage.url} 
                         alt={recipe.title}
                         className="img-fluid"
@@ -56,6 +71,7 @@ const Recipe = ({ pageContext }) => {
                             <p>{recipe.cookingTime} minutes</p>
                         </Col>
                     </Row>
+                    <InfoSpacer></InfoSpacer>
                     <Row>
                         <Col>
                             <p><strong>Number of Servings:</strong></p>

@@ -1,19 +1,28 @@
 // Step 1: Import React
 import * as React from 'react'
-import Layout from '../components/layout'
+import styled from 'styled-components'
+import { Layout } from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
+
+const ImageWrapper = styled.div`
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 2rem;
+`;
 
 // Step 2: Define your component
 const HomePage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <p>I'm making this by following the Gatsby Tutorial.</p>
-      <StaticImage
-        alt="Marco, a black and white Pomsky, laying in the park"
-        src="../../static/images/marco_park.jpg"
-        aspectRatio={3/4}
-      />
+      <h2 style={{textAlign: 'center'}}>Welcome to my Gatsby Page!</h2>
+      <ImageWrapper>
+        <StaticImage
+          alt="Marco, a black and white Pomsky, laying in the park"
+          src="../../static/images/marco_park.jpg"
+          aspectRatio={3/4}
+        />
+      </ImageWrapper>
       <div>
         <p> </p>
       </div>

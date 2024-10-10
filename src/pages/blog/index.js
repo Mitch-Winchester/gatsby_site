@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
-import Layout from '../../components/layout'
+import { Layout } from '../../components/layout'
 import Seo from '../../components/seo'
 
 const BlogPage = ({ data }) => {
@@ -14,7 +14,7 @@ const BlogPage = ({ data }) => {
                                 {node.frontmatter.title}
                             </Link>
                         </h2>
-                        <p>Posted: {node.frontmatter.date}</p>
+                        <p><strong>Posted:</strong> {node.frontmatter.date}</p>
                         <p>{node.excerpt}</p>
                     </article>
                 ))

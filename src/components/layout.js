@@ -3,6 +3,9 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { Container } from 'react-bootstrap'
 
+const Img = styled.img`
+    border-radius: 30px;
+`;
 const LayCon = styled(Container)`
     margin: 2rem auto;
     font-family: sans-serif;
@@ -143,4 +146,4 @@ const Layout = ({ pageTitle, children }) => {
     )
 }
 
-export default Layout
+export { Layout, Img }

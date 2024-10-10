@@ -1,13 +1,15 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import Layout from '../components/layout'
+import { Container } from 'react-bootstrap'
+import { Layout, Img } from '../components/layout'
 
 const NormalText = styled.p`
     font-size: 1rem;
 `;
-
-const NodeImage = styled.img`
-    width: 100%;
+const ImgCon = styled(Container)`
+    justify-content: center;
+    margin: auto auto 2rem;
+    width: fit-content;
 `;
 
 const Article = ({ pageContext }) => {
@@ -19,12 +21,12 @@ const Article = ({ pageContext }) => {
                 <p>By: {article.author.displayName}</p>
                 <p>Date: {article.created}</p>
             </div>
-            <div>
-                <NodeImage 
+            <ImgCon>
+                <Img 
                     src={article.mediaImage.mediaImage.url} 
                     alt={article.title}
                 />
-            </div>
+            </ImgCon>
             <div>
                 <NormalText dangerouslySetInnerHTML={{ __html: article.body?.processed }}>
                 </NormalText>

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Link, graphql } from 'gatsby'
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 import Seo from '../components/seo'
 
 const RecipePage = ({ data }) => {
@@ -14,7 +14,11 @@ const RecipePage = ({ data }) => {
                                 {node.title}
                             </Link>
                         </h2>
-                        <p><strong>Difficulty:</strong> {node.difficulty.charAt(0).toUpperCase()+node.difficulty.slice(1)}</p>
+                        <p>
+                            <strong>Difficulty:</strong>&nbsp;&nbsp;
+                            {node.difficulty.charAt(0).toUpperCase()+node.difficulty.slice(1)}
+                        </p>
+                        <p dangerouslySetInnerHTML={{ __html: node.summary?.processed }}></p>
                     </article>
                 ))
             }
@@ -30,6 +34,9 @@ export const query = graphql`
                     title
                     id
                     difficulty
+                    summary {
+                        processed
+                    }
                 }
             }
         }

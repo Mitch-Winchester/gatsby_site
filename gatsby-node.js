@@ -26,6 +26,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                             recipeInstruction {
                                 processed
                             }
+                            summary {
+                                processed
+                            }
                         }
                     }
                     nodeArticles(first: 10) {

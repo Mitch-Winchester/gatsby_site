@@ -1,21 +1,27 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import Layout from '../../components/layout'
+import { Layout } from '../../components/layout'
 import Seo from '../../components/seo'
+
+const StyledImg = styled(GatsbyImage)`
+    border-radius: 30px;
+    margin: auto auto 2rem;
+`;
 
 const BlogPost = ({ data, children }) => {
     const image = getImage(data.mdx.frontmatter.hero_image)
 
     return (
         <Layout pageTitle={data.mdx.frontmatter.title}>
-            <p>Posted: {data.mdx.frontmatter.date}</p>
-            <GatsbyImage
+            <p><strong>Posted:</strong> {data.mdx.frontmatter.date}</p>
+            <StyledImg
                 image={image}
                 alt={data.mdx.frontmatter.hero_image.alt}
             />
             <p>
-                Photo Credit:{" "}
+                <strong>Photo Credit:{" "}</strong>
                 <a href={data.mdx.frontmatter.hero_image_credit_link}>
                     {data.mdx.frontmatter.hero_image_credit_text}
                 </a>
