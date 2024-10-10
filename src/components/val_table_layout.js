@@ -23,8 +23,11 @@ const TableHead = styled.h1`
 `;
 const TableCon = styled(Container)`
     justify-content: center;
-    zoom: 90%;
+    zoom: 85%;
 
+    @media (max-width: 1200px) {
+        zoom: 82%;
+    }
     @media (max-width: 768px) {
         zoom: 80%;
     }

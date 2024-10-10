@@ -38,6 +38,7 @@ module.exports = {
         // url: "http://10.89.0.24/graphql",
         url: `https://csc496f24demo.tldr.dev/graphql`,
       }
-    }
+    },
+    `gatsby-plugin-styled-components`
   ],
 }

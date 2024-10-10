@@ -14,10 +14,10 @@ const ValBut = styled.button`
     border-radius: 15px;
     box-shadow: 0 0.5vh lightgray;
 
-    &.hover {
+    &:hover {
         background-color: rgb(80, 85, 91);
     }
-    &.active {
+    &:active {
         background-color: rgb(80, 85, 91);
         box-shadow: 0 0.25vh darkgray;
         transform: translateY(0.25vh);
