@@ -13,7 +13,8 @@ const ValBody = styled(Container)`
     background-size: cover;
     background-attachment: fixed;
     min-height: 100vh;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto ;
 `;
 const BackButCon = styled(Container)`
     display: flex;
