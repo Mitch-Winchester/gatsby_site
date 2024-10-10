@@ -64,7 +64,6 @@ const SiteHead = styled.header`
     width: fit-content;
 `;
 const PageHead = styled.h1`
-    font-size: 5vw;
     color: rebeccapurple;
     margin: 3rem auto;
     display: flex;

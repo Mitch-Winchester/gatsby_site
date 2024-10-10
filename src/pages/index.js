@@ -15,7 +15,7 @@ const ImageWrapper = styled.div`
 const HomePage = () => {
   return (
     <Layout pageTitle="Home Page">
-      <h2 style={{textAlign: 'center'}}>Welcome to my Gatsby Page!</h2>
+      <h4 style={{textAlign: 'center'}}>Welcome to my Gatsby Page!</h4>
       <ImageWrapper>
         <StaticImage
           alt="Marco, a black and white Pomsky, laying in the park"

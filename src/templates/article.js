@@ -25,6 +25,7 @@ const Article = ({ pageContext }) => {
                 <Img 
                     src={article.mediaImage.mediaImage.url} 
                     alt={article.title}
+                    className="img-fluid"
                 />
             </ImgCon>
             <div>
