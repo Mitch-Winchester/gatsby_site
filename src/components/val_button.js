@@ -3,7 +3,6 @@ import { navigate } from 'gatsby'
 import styled from 'styled-components'
 
 const ValBut = styled.button`
-    display: inline-block;
     padding: 1vh 3vw;
     font-size: 2vw;
     cursor: pointer;

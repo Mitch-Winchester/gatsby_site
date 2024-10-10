@@ -18,7 +18,7 @@ const ValBody = styled(Container)`
 const BackButCon = styled(Container)`
     display: flex;
     justify-content: center;
-    margin: 10%;
+    margin: 4rem auto 0;
 `;
 const SearchBar = styled.div`
     display: flex;
@@ -94,6 +94,7 @@ const ValLayout = ({
                     />
                 </BackButCon>
             )}
+            <div style={{margin: "2rem"}}></div>
         </ValBody>
     )
 }

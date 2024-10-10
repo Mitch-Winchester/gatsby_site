@@ -1,12 +1,10 @@
 /* Style page headers */
 .main-header {
-  margin: 10%;
-  margin-top: 2.5%;
+  margin: 2.5% 10% 5%;
   background-image: url("/images/valheim_logo.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center top;
-
   width: 80vw;
   height: 200px;
 }
@@ -44,8 +42,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 10% 0;
   zoom: 70%;
 }
 .table {
@@ -69,18 +66,4 @@
 }
 .quality-table-data {
   padding: 10px 5vw;
-}
-
-/* Buttons */
-.button-div {
-  display: flex;
-  flex-direction: column;
-  gap: 10vw; /* Space between the two button divs */
-  margin: 10vw;
-}
-.button-row {
-  display: flex;
-  justify-content: center;
-  gap: 10vw; /* Space between each button */
-  padding: 0 15%; /* Adjusts space on the sides */
 }
