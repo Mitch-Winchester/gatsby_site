@@ -8,31 +8,31 @@ import {
 } from './val_layout.module.css'
 
 const ValBody = styled(Container)`
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 100vh;
-  overflow: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow: auto;
 `;
 const BackButCon = styled(Container)`
     display: flex;
     justify-content: center;
     margin: 4rem auto 0;
 `;
-const SearchBar = styled.div`
-    display: flex;
+const SearchBar = styled(Container)`
     justify-content: center;
-    position: relative;
-    margin: 1%;
+    margin: 1% auto;
+    width: fit-content;
+`;
+const SearchInput = styled.input`
+    max-width: 20vw;
+    border: none;
 
-    &.input {
-        padding: 6px;
-        margin-top: 8px;
-        font-size: 17px;
-        border: none;
+    @media (max-width: 576px) {
+        font-size: 3vw;
     }
-`
+`;
 
 const ValLayout = ({
     background,
@@ -74,7 +74,7 @@ const ValLayout = ({
             <header className={head}>{title}</header>
             {showSearch && setFilter && (
                 <SearchBar>
-                    <input 
+                    <SearchInput 
                         type="text" 
                         placeholder="Search..." 
                         onChange={inputChange}
