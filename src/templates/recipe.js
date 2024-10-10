@@ -53,20 +53,30 @@ const Recipe = ({ pageContext }) => {
         <Layout pageTitle={recipe.title}>
             <RecSum dangerouslySetInnerHTML={{ __html: recipe.summary?.processed }}></RecSum>
             <Row className="align-items-center">
-                <Col xs={12} md={6}>
+                <Col xs={12} lg={6}>
                     <Img 
                         src={recipe.mediaImage.mediaImage.url} 
                         alt={recipe.title}
                         className="img-fluid"
                     />
                 </Col>
-                <InfoCol xs={12} md={6}>
+                <InfoCol xs={12} lg={6}>
                     <Row>
                         <Col>
+                            <img 
+                                src='/images/recipeInfo/knife.svg' 
+                                height={'50px'}
+                                alt='PrepKnife'
+                                ></img>
                             <p><strong>Preparation Time:</strong></p>
                             <p>{recipe.preparationTime} minutes</p>
                         </Col>
                         <Col>
+                        <img
+                            src='/images/recipeInfo/timer.svg'
+                            height={'50px'}
+                            alt='EggTimer'
+                            ></img>
                             <p><strong>Cooking Time:</strong></p>
                             <p>{recipe.cookingTime} minutes</p>
                         </Col>
@@ -74,10 +84,20 @@ const Recipe = ({ pageContext }) => {
                     <InfoSpacer></InfoSpacer>
                     <Row>
                         <Col>
+                        <img
+                            src='/images/recipeInfo/serves.svg'
+                            height={'50px'}
+                            alt='ServePlate'
+                            ></img>
                             <p><strong>Number of Servings:</strong></p>
                             <p>{recipe.numberOfServings}</p>  
                         </Col>
                         <Col>
+                        <img
+                            src='/images/recipeInfo/difficulty.svg'
+                            height={'50px'}
+                            alt='DifficultyGauge'
+                            ></img>
                             <p><strong>Difficulty:</strong></p>
                             <p>{recipe.difficulty.charAt(0).toUpperCase()+recipe.difficulty.slice(1)}</p>  
                         </Col>
