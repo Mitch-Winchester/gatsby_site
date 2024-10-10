@@ -5,6 +5,7 @@ import { Container } from 'react-bootstrap'
 
 const Img = styled.img`
     border-radius: 30px;
+    margin-bottom: 2rem;
 `;
 const LayCon = styled(Container)`
     margin: 2rem auto;

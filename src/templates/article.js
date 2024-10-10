@@ -8,7 +8,6 @@ const NormalText = styled.p`
 `;
 const ImgCon = styled(Container)`
     justify-content: center;
-    margin: auto auto 2rem;
     width: fit-content;
 `;
 
