@@ -4,9 +4,32 @@ import styled from 'styled-components'
 import { Row, Col } from 'react-bootstrap'
 
 const InfoCol = styled(Col)`
-    display: flex;
-    justify-content: center center;
+    justify-content: center;
     text-align: center;
+    align-items: center;
+`;
+const IngCol = styled(Col)`
+    padding: 2rem;
+    background-color: rgb(94, 102, 111);
+    border-radius: 30px;
+    color: lightgrey;
+`;
+const IngHead = styled.h2`
+    margin: 0 0 0.6em 0;
+    padding: 0 0 0.6em 0;
+    border-bottom: 2px solid rebeccapurple;
+`;
+const IngItem = styled.div`
+    margin: 0 0 0.6em 0;
+    padding: 0 0 0.6em 0;
+    border-bottom: 2px solid rebeccapurple;
+`;
+const RecCol = styled(Col)`
+    padding: 2rem;
+
+    @media (max-width: 768px) {
+        padding: 1rem;
+    }
 `;
 
 const Recipe = ({ pageContext }) => {
@@ -14,7 +37,7 @@ const Recipe = ({ pageContext }) => {
 
     return (
         <Layout pageTitle={recipe.title}>
-            <Row>
+            <Row className="align-items-center">
                 <Col xs={12} md={6}>
                     <img 
                         src={recipe.mediaImage.mediaImage.url} 
@@ -47,16 +70,16 @@ const Recipe = ({ pageContext }) => {
             </Row>
             <div style={{margin: "2rem"}}></div>
             <Row>
-                <Col xs={12} md={4} className="mb-3">
-                    <h2>Ingredients:</h2>
+                <IngCol xs={12} sm={6} md={6} lg={4}>
+                    <IngHead>Ingredients:</IngHead>
                     {recipe.ingredients?.map((ingredient, ingIndex) => (
-                        <p key={ingIndex}>{ingredient}</p>
+                        <IngItem key={ingIndex}>{ingredient}</IngItem>
                     ))}
-                </Col>
-                <Col xs={12} md={8}>
+                </IngCol>
+                <RecCol xs={12} sm={6} md={6} lg={8}>
                     <h2>Recipe Instructions:</h2>
                     <p dangerouslySetInnerHTML={{ __html: recipe.recipeInstruction?.processed }}></p>
-                </Col>
+                </RecCol>
             </Row>
         </Layout>
     )
