@@ -67,6 +67,10 @@ const SiteHead = styled.header`
     display: flex;
     justify-content: center center;
     width: fit-content;
+
+    @media (max-width: 576px) {
+        font-size: 8vw;
+    }
 `;
 const PageHead = styled.h1`
     color: rebeccapurple;

@@ -44,13 +44,6 @@ module.exports = {
         path: `${__dirname}/src/pages/val_comp/data`
       }
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `val_images`,
-        path: `${__dirname}/src/pages/val_comp/static/images`,
-      },
-    },
     { /*  
         used to prevent main site from creating unwanted 
         pages from val_comp submodule 

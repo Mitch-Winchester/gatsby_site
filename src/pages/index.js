@@ -9,6 +9,14 @@ const ImageWrapper = styled.div`
   border-radius: 30px;
   overflow: hidden;
   margin: 2rem;
+
+  @media (max-width: 768px) {
+    margin: 1.5rem;
+  }
+
+  @media (max-width: 576px) {
+    margin: 1rem;
+  }
 `;
 
 // Step 2: Define your component
