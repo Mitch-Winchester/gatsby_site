@@ -32,6 +32,7 @@ const LayCon = styled(Container)`
 `;
 const BodyCon = styled(Container)`
     background-color: rgb(94, 102, 111);
+    min-height: 100vh;
     overflow: auto;
 `;
 const NavList = styled.ul`

@@ -17,8 +17,14 @@ const Article = ({ pageContext }) => {
     return (
         <Layout pageTitle={article.title}>
             <div>
-                <p>By: {article.author.displayName}</p>
-                <p>Date: {article.created}</p>
+                <p>
+                    <strong>By:</strong>&nbsp;&nbsp;
+                    {article.author.displayName}
+                </p>
+                <p>
+                    <strong>Date:</strong>&nbsp;&nbsp;
+                    {new Date(article.created).toDateString()}
+                </p>
             </div>
             <ImgCon>
                 <Img 

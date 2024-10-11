@@ -14,7 +14,10 @@ const ArticlePage = ({ data }) => {
                                 {node.title}
                             </StyledLink>
                         </h2>
-                        <p><strong>Author:</strong> {node.author.displayName.charAt(0).toUpperCase()+node.author.displayName.slice(1)}</p>
+                        <p>
+                            <strong>Author:</strong>&nbsp;&nbsp;
+                            {node.author.displayName.charAt(0).toUpperCase()+node.author.displayName.slice(1)}    
+                        </p>
                     </article>
                 ))
             }
