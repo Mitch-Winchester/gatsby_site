@@ -7,10 +7,12 @@ const RecipePage = ({ data }) => {
     return (
         <Layout pageTitle="My Recipes">
             {
-                data.allDrupalNodeArtRec.nodeRecipes.nodes.map((node) => (
+                data.allDrupalNodeArtRec.nodeRecipes.nodes.map(node => {
+                    const slug = node.title.replaceAll(' ', '-')
+                    return (
                     <article key={node.id}>
                         <h2>
-                            <StyledLink to={`/recipe/${node.title}`}>
+                            <StyledLink to={`/recipe/${slug}`}>
                                 {node.title}
                             </StyledLink>
                         </h2>
@@ -20,7 +22,8 @@ const RecipePage = ({ data }) => {
                         </p>
                         <p dangerouslySetInnerHTML={{ __html: node.summary?.processed }}></p>
                     </article>
-                ))
+                    )
+                })
             }
         </Layout>
     )

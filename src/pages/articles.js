@@ -7,10 +7,12 @@ const ArticlePage = ({ data }) => {
     return (
         <Layout pageTitle="My Articles">
             {
-                data.allDrupalNodeArtRec.nodeArticles.nodes.map(node => (
+                data.allDrupalNodeArtRec.nodeArticles.nodes.map(node => {
+                    const slug = node.title.replaceAll(' ', '-')
+                    return (
                     <article key={node.id}>
                         <h2>
-                            <StyledLink to={`/article/${node.title}`}>
+                            <StyledLink to={`/article/${slug}`}>
                                 {node.title}
                             </StyledLink>
                         </h2>
@@ -19,7 +21,8 @@ const ArticlePage = ({ data }) => {
                             {node.author.displayName.charAt(0).toUpperCase()+node.author.displayName.slice(1)}    
                         </p>
                     </article>
-                ))
+                    )
+                })
             }
         </Layout>
     )

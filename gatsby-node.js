@@ -60,6 +60,35 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
 
     // Create pages for each node
+    const templates = {
+        recipe: path.resolve(`src/templates/recipe.js`),
+        article: path.resolve(`src/templates/article.js`)
+    }
+
+    // Separate recipe and article nodes
+    const { nodeArticles, nodeRecipes } = result.data.allDrupalNodeArtRec
+
+    const createPageFromNodes = (nodes, type) => {
+        nodes.forEach(node => {
+            const slug = node.title.replaceAll(' ', '-')
+            createPage({
+                path: `/${type}/${slug}`,
+                component: templates[type],
+                context: {
+                    [type]: node,
+                },
+            })
+        })
+    }
+
+    if (nodeArticles) {
+        createPageFromNodes(nodeArticles.nodes, "article")
+    }
+    if (nodeRecipes) {
+        createPageFromNodes(nodeRecipes.nodes, "recipe")
+    }
+
+    /*
     const recipesTemplate = path.resolve(`src/templates/recipe.js`)
     const articlesTemplate = path.resolve(`src/templates/article.js`)
     
@@ -85,4 +114,5 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             })
         })
     }
+    */
 }
