@@ -132,7 +132,7 @@ const Layout = ({ pageTitle, children }) => {
                     </NavList>
                     <NavList className="nav nav-pills">
                         <li className="nav-item">
-                            <NavLink to="/val_comp"
+                            <NavLink to="/val_comp/src/pages"
                                 activeClassName="active"
                             >
                                 Valheim Companion App
