@@ -1,0 +1,3 @@
+[submodule "src/pages/val_comp"]
+	path = src/pages/val_comp
+	url = https://github.com/Mitch-Winchester/valheim_companion
