@@ -12,7 +12,7 @@ const StyledLink = styled(Link)`
 
     &:hover {
         background-color: rgb(102, 51, 153, 0.5);
-        color: white;
+        color: lightgrey;
     }
 `;
 const LayCon = styled(Container)`
