@@ -9,6 +9,11 @@ const Img = styled.img`
 `;
 const StyledLink = styled(Link)`
     color: rgb(94, 102, 111);
+
+    &:hover {
+        background-color: rgb(102, 51, 153, 0.5);
+        color: white;
+    }
 `;
 const LayCon = styled(Container)`
     margin: 2rem auto;
@@ -51,7 +56,12 @@ const NavLink = styled(Link)`
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 0.25rem;
-    margin: 0 0.25rem;
+    margin: 0 0.5rem;
+
+    &:hover {
+        background-color: rgb(102, 51, 153, 0.5);
+        color: white;
+    }
 
     &.active {
         background-color: rebeccapurple;
