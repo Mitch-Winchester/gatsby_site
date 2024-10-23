@@ -23,6 +23,9 @@ jobs:
       - name: Install Gatsby CLI
         run: npm install -g gatsby-cli
 
+      - name: Copy submodule assets
+        run: cp -r src/pages/val_comp/static/val_images static/val_images
+
       - name: Build
         run: gatsby build --prefix-paths
 
@@ -37,7 +40,7 @@ jobs:
           USERNAME: ${{ secrets.USER }}
           KEY: ${{ secrets.PRIVATE_KEY }}
         with:
-          source: "./public/.,docker-compose.yml"
+          source: "public/*,docker-compose.yml"
           target: "/home/student02/site/html"
           host: ${{ secrets.IP }}
           username: ${{ secrets.USER }}
