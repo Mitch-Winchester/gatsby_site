@@ -40,5 +40,5 @@ jobs:
           source: "./public/*,docker-compose.yml"
           target: "/home/student02/site/html"
           host: ${{ secrets.IP }}
-          user: ${{ secrets.USER }}
+          username: ${{ secrets.USER }}
           key: ${{ secrets.PRIVATE_KEY }}
