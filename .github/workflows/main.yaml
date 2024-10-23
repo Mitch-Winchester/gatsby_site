@@ -26,7 +26,6 @@ jobs:
       - name: Build submodule
         run: |
           cd src/pages/val_comp
-          npm install
           gatsby build
       
       - name: Copy submodule assets

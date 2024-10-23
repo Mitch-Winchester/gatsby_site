@@ -55,7 +55,8 @@ module.exports = {
           `**/val_comp/gatsby-*.js`,
           `**/val_comp/src/pages/404.js`,
           `**/val_comp/src/components/**`,
-          `**/val_comp/public/**`
+          `**/val_comp/public/**`,
+          `**/val_comp/.cache/**`
         ],
       },
     },
