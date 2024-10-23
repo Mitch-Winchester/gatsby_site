@@ -41,7 +41,7 @@ module.exports = {
       */
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/pages/val_comp/data`
+        path: `${__dirname}/src/pages/val_comp/data`
       }
     },
     { /*  
@@ -50,7 +50,7 @@ module.exports = {
       */
       resolve: `gatsby-plugin-page-creator`,
       options: {
-        path: `./src/pages`,
+        path: `${__dirname}/src/pages`,
         ignore: [
           `**/val_comp/gatsby-*.js`,
           `**/val_comp/src/pages/404.js`,
