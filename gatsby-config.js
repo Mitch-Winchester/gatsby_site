@@ -13,7 +13,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/src/pages/blog/`,
+        path: `./src/pages/blog/`,
       },
     },
     "gatsby-plugin-mdx",
@@ -41,7 +41,7 @@ module.exports = {
       */
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages/val_comp/data`
+        path: `./src/pages/val_comp/data`
       }
     },
     { /*  
@@ -50,7 +50,7 @@ module.exports = {
       */
       resolve: `gatsby-plugin-page-creator`,
       options: {
-        path: `${__dirname}/src/pages`,
+        path: `./src/pages`,
         ignore: [
           `**/val_comp/gatsby-*.js`,
           `**/val_comp/src/pages/404.js`,
