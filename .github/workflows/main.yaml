@@ -1,4 +1,4 @@
-name: blog
+name: mitch-site
 on:
   push:
     branches: main
