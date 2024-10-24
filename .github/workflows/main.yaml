@@ -35,7 +35,7 @@ jobs:
       - name: copy file via ssh key
         uses: appleboy/scp-action@master
         with:
-          source: "public/*"
+          source: "public/."
           target: "/home/student02/site/html"
           host: ${{ secrets.IP }}
           username: ${{ secrets.USER }}
