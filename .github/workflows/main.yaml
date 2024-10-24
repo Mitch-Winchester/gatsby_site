@@ -42,8 +42,8 @@ jobs:
           key: ${{ secrets.PRIVATE_KEY }}
           strip_components: 1
 
-      - name: stop container
-        run: docker-compose down
-      
-      - name: start container
-        run: docker-compose up -d
+      - name: Docker Compose Action
+        uses: hoverkraft-tech/compose-action@v2.0.2
+        with:
+          compose-file: "compose.yml"
+          up-flags: "--detach"
