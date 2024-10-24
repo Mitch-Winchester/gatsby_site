@@ -41,13 +41,6 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.PRIVATE_KEY }}
           strip_components: 1
-      
-      - name: multiple command
-        uses: appleboy/ssh-action@v1.1.0
-        with:
-          host: ${{ secrets.IP }}
-          username: ${{ secrets.USER }}
-          key: ${{ secrets.PRIVATE_KEY }}
           script: |
             docker compose down
             docker compose up -d
