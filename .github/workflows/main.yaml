@@ -22,25 +22,33 @@ jobs:
 
       - name: Install Gatsby CLI
         run: npm install -g gatsby-cli
-      
-      - name: Create Symlink to submodule assests
-        run: ln -s src/pages/val_comp/static/val_images static/val_images
-      
+
+      - name: Copy submodule assets
+        run: cp -r src/pages/val_comp/static/val_images static/val_images
+
       - name: Build
         run: gatsby build --prefix-paths
 
       - name: Verify build
         run: ls -la public
 
-      - name: copy file via ssh key
+      - name: copy file via ssh key to temp
         uses: appleboy/scp-action@master
         with:
-          source: "public/*,compose.yml"
-          target: "/home/${{ secrets.USER }}/site/html"
+          source: "public/*"
+          target: "/home/${{ secrets.USER }}/site/temp"
           host: ${{ secrets.IP }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.PRIVATE_KEY }}
           strip_components: 1
+          rm: true
+
+      - name: sync to permenant directory
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.IP }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.PRIVATE_KEY }}
           script: |
-            docker compose down
-            docker compose up -d
+            ${{ secrets.SYNC_SCRIPT }}
+            ${{ secrets.CLEANUP_SCRIPT }}
