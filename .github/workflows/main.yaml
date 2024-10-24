@@ -35,8 +35,9 @@ jobs:
       - name: copy file via ssh key
         uses: appleboy/scp-action@master
         with:
-          source: "public,compose.yml"
-          target: "/home/student02/site/html"
+          source: "public/*,compose.yml"
+          target: "/home/${{ secrets.USER }}/site/html"
           host: ${{ secrets.IP }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.PRIVATE_KEY }}
+          strip_components: 1
