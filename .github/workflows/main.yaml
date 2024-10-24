@@ -22,7 +22,10 @@ jobs:
 
       - name: Install Gatsby CLI
         run: npm install -g gatsby-cli
-
+      
+      - name: Create Symlink to submodule assests
+        run: ln -s src/pages/val_comp/static/val_images static/val_images
+      
       - name: Build
         run: gatsby build --prefix-paths
 
