@@ -32,23 +32,15 @@ jobs:
       - name: Verify build
         run: ls -la public
 
-      - name: copy file via ssh key to temp
+      - name: copy file via ssh key
         uses: appleboy/scp-action@master
         with:
-          source: "public/*"
-          target: "/home/${{ secrets.USER }}/site/temp"
+          source: "public/*,compose.yml"
+          target: "/home/${{ secrets.USER }}/site/html"
           host: ${{ secrets.IP }}
           username: ${{ secrets.USER }}
           key: ${{ secrets.PRIVATE_KEY }}
           strip_components: 1
-          rm: true
-
-      - name: sync to permenant directory
-        uses: appleboy/ssh-action@v1.1.0
-        with:
-          host: ${{ secrets.IP }}
-          username: ${{ secrets.USER }}
-          key: ${{ secrets.PRIVATE_KEY }}
           script: |
-            ${{ secrets.SYNC_SCRIPT }}
-            ${{ secrets.CLEANUP_SCRIPT }}
+            docker compose down
+            docker compose up -d
