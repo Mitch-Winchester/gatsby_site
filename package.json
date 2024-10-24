@@ -8,6 +8,7 @@
     "gatsby"
   ],
   "scripts": {
+    "test": "jest",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -34,6 +35,13 @@
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^2.1.4"
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/react": "^16.0.1",
+    "babel-jest": "^29.7.0",
+    "babel-plugin-styled-components": "^2.1.4",
+    "babel-preset-gatsby": "^3.13.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
   }
 }

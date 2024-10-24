@@ -3,5 +3,5 @@ node_modules/
 public
 static/val_images
 src/pages/val_comp/static/val_images/.DS_Store
-
 src/pages/val_comp/.DS_Store
+.VSCodeCounter
