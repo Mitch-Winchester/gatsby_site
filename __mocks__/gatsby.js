@@ -4,7 +4,34 @@ const gatsby = jest.requireActual("gatsby")
 
 module.exports = {
     ...gatsby,
-    graphql: jest.fn(),
+    graphql: jest.fn(() => {return{"allDrupalNodeArtRec": {
+        "nodeArticles": {
+            "nodes": {
+                "title": "temp",
+                "author": {
+                    "displayName": "temp"
+                },
+                "created": "temp",
+                "mediaImage": {
+                    "mediaImage": {
+                        "url": "temp"
+                    }
+                },
+                "body": {
+                    "processed": "article body content"
+                }
+            }
+        }
+    }}}),
+    mockPageContext: {
+        article: {
+            title: "temp",
+            author: { displayName: "temp" },
+            created: "temp",
+            mediaImage: { mediaImage: { url: "temp" } },
+            body: { processed: "the article body content" }
+        }
+    },
     Link: jest.fn().mockImplementation(
         // these props are invalid for an `a` tag
         ({
@@ -30,5 +57,9 @@ module.exports = {
                 "data-test-slice-alias": alias
             })
     ),
-    useStaticQuery: jest.fn(),
+    useStaticQuery: (jest.fn()).mockReturnValueOnce({"site": {
+        "siteMetadata": {
+            "title": "Mitch's Gatsby Site"
+        }
+    }}),
 }

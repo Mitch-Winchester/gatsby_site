@@ -34,7 +34,8 @@ const Article = ({ pageContext }) => {
                 />
             </ImgCon>
             <div>
-                <NormalText dangerouslySetInnerHTML={{ __html: article.body?.processed }}>
+                <NormalText data-testid="test-body"
+                dangerouslySetInnerHTML={{ __html: article.body?.processed }}>
                 </NormalText>
             </div>
         </Layout>
