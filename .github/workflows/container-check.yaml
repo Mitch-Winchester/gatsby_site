@@ -1,4 +1,4 @@
-name: mitch-site
+name: mitch-site-container-check
 on:
   schedule:
     - cron: '30 * * * *'
