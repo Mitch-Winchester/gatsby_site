@@ -12,7 +12,7 @@ const ArticlePage = ({ data }) => {
                     return (
                     <article key={node.id}>
                         <h2>
-                            <StyledLink to={`/article/${slug}`}>
+                            <StyledLink data-testid="article-link" to={`/article/${slug}`}>
                                 {node.title}
                             </StyledLink>
                         </h2>

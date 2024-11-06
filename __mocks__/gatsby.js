@@ -6,21 +6,13 @@ module.exports = {
     ...gatsby,
     graphql: jest.fn(() => {return{"allDrupalNodeArtRec": {
         "nodeArticles": {
-            "nodes": {
+            "nodes": [{
                 "title": "temp",
+                "id": "temp",
                 "author": {
                     "displayName": "temp"
-                },
-                "created": "temp",
-                "mediaImage": {
-                    "mediaImage": {
-                        "url": "temp"
-                    }
-                },
-                "body": {
-                    "processed": "article body content"
                 }
-            }
+            }]
         }
     }}}),
     mockPageContext: {
