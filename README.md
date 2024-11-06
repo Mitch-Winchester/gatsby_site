@@ -7,8 +7,8 @@
   Gatsby Minimal Starter
 </h1>
 
-[![mitch-site-container-check](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/container-check.yaml/badge.svg)](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/container-check.yaml)
 [![mitch-site-deploy](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/main.yaml/badge.svg)](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/main.yaml)
+[![mitch-site-container-check](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/container-check.yaml/badge.svg)](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/container-check.yaml)
 
 ## 🚀 Quick start
 
