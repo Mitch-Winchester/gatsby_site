@@ -1,0 +1,22 @@
+name: mitch-site
+on:
+  schedule:
+    - cron: '30 * * * *'
+jobs:
+  build-and-deploy:
+    name: Scheduled Container Status Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure docker container is running
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.IP }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          script: |
+            if [ "$(docker inspect student02 --format '{{.State.Status}}')" != "running" ]; then
+              echo "Container not running"
+              echo "Restarting..."
+              docker compose down
+              docker compose -f ./site/compose.yml up -d
+            fi
