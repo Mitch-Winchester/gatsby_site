@@ -4,49 +4,35 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal Starter
+  Mitch's Gatsby Site
 </h1>
 
-[![mitch-site-deploy](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/main.yaml/badge.svg)](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/main.yaml?event=push)
+<div align='center'>
+  
+  [![mitch-site-deploy](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/main.yaml/badge.svg)](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/main.yaml?event=push)
 [![mitch-site-container-check](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/container-check.yaml/badge.svg)](https://github.com/Mitch-Winchester/gatsby_site/actions/workflows/container-check.yaml)
 
-## 🚀 Quick start
+<br/>
 
-1.  **Create a Gatsby site.**
+</div>
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Purpose
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+<p>
+  The purpose of this project was to implement a GatsbyJS website and use it to practice using various tools and concepts including Docker, Drupal, Git, and GitHub Workflow Actions.
+</p>
+<p>
+  Below are links to the various pages of the website.
+</p>
 
-2.  **Start developing.**
+<br/>
+<h3 align='center'>Link's to site pages</h3>
+<div align='center'>
 
-    Navigate into your new site’s directory and start it up.
+[<kbd> <br> Home Page <br> </kbd>](https://student02.wendell.tech)&nbsp;&nbsp;&nbsp;
+[<kbd> <br> About <br> </kbd>](https://student02.wendell.tech/about)&nbsp;&nbsp;&nbsp;
+[<kbd> <br> Blog <br> </kbd>](https://student02.wendell.tech/blog)&nbsp;&nbsp;&nbsp;
+[<kbd> <br> Recipes <br> </kbd>](https://student02.wendell.tech/recipes)&nbsp;&nbsp;&nbsp;
+[<kbd> <br> Articles <br> </kbd>](https://student02.wendell.tech/articles)
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+</div>
