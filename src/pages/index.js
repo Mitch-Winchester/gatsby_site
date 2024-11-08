@@ -8,7 +8,16 @@ import Seo from '../components/seo'
 const ImageWrapper = styled.div`
   border-radius: 30px;
   overflow: hidden;
-  margin: 2rem;
+  margin: 4rem 20rem;
+
+  @media (max-width: 1920px) {
+    margin: 2rem 10rem;
+  }
+
+  @media (max-width: 1400px) {
+    margin: 2rem 5rem;
+  }
+
 
   @media (max-width: 768px) {
     margin: 1.5rem;

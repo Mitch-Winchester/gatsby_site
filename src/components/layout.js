@@ -23,10 +23,15 @@ const LayCon = styled(Container)`
     border-radius: 30px;
     padding: 3rem;
     box-shadow: 0 0 20px 10px black;
-    max-width: 80vw;
+    max-width: 60vw;
+
+    @media (max-width: 1920px) {
+        max-width: 70vw;
+    }
 
     @media (max-width: 768px) {
         padding: 2rem;
+        max-width: 80vw;
     }
     
     @media (max-width: 576px) {
@@ -69,7 +74,7 @@ const NavLink = styled(Link)`
     }
 `;
 const SiteHead = styled.header`
-    font-size: 7vw;
+    font-size: 5vw;
     color: rgb(94, 102, 111);
     font-weight: 700;
     margin: 3rem auto;
@@ -77,6 +82,10 @@ const SiteHead = styled.header`
     display: flex;
     justify-content: center center;
     width: fit-content;
+
+    @media (max-width: 1920px) {
+        font-size: 6vw;
+    }
 
     @media (max-width: 576px) {
         font-size: 8vw;
