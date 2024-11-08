@@ -18,7 +18,6 @@ const ImageWrapper = styled.div`
     margin: 2rem 5rem;
   }
 
-
   @media (max-width: 768px) {
     margin: 1.5rem;
   }
