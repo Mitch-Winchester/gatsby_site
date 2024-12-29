@@ -1,4 +1,6 @@
 name: mitch-site-ssh-check
+on:
+  workflow_dispatch:
 jobs:
   build-and-deploy:
     name: SSH Test
