@@ -1,0 +1,14 @@
+name: mitch-site-ssh-check
+jobs:
+  build-and-deploy:
+    name: SSH Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure docker container is running
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.IP }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.PRIVATE_KEY }}
+          script: |
+            echo "SSH connection successful!"
